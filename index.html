@@ -11,7 +11,7 @@ Bridge Money Solutions Network | Credit Advisory Zambia
 </title>
 
 <meta name="description" content="
-Bridge Money Solutions Network provides loan consultancy, vehicle finance, CRB advisory, financial investigations and credit solutions in Zambia.
+Bridge Money Solutions Network connects clients with suitable lenders through loan consultancy, vehicle finance, CRB services and financial solutions in Zambia.
 ">
 
 <style>
@@ -42,6 +42,11 @@ box-sizing:border-box;
 }
 
 
+html{
+scroll-behavior:smooth;
+}
+
+
 body{
 
 font-family:Inter,Arial,sans-serif;
@@ -59,6 +64,7 @@ margin:auto;
 padding:0 22px;
 
 }
+
 
 
 /* HEADER */
@@ -102,20 +108,26 @@ margin-top:25px;
 .badges span{
 
 display:inline-block;
+
 background:rgba(16,185,129,.15);
+
 border:1px solid rgba(16,185,129,.4);
+
 padding:8px 15px;
+
 border-radius:30px;
+
 margin:5px;
+
 font-size:14px;
+
 color:#6ee7b7;
 
 }
 
 
 
-/* NAV */
-
+/* NAVIGATION */
 
 nav{
 
@@ -124,6 +136,7 @@ top:0;
 z-index:999;
 
 background:white;
+
 border-bottom:1px solid var(--border);
 
 }
@@ -133,7 +146,7 @@ border-bottom:1px solid var(--border);
 
 display:flex;
 justify-content:center;
-gap:15px;
+gap:10px;
 flex-wrap:wrap;
 padding:15px;
 
@@ -143,9 +156,13 @@ padding:15px;
 .nav a{
 
 text-decoration:none;
+
 color:var(--text);
+
 font-weight:600;
-padding:10px 18px;
+
+padding:10px 15px;
+
 border-radius:8px;
 
 }
@@ -154,21 +171,25 @@ border-radius:8px;
 .nav a:hover{
 
 background:#ecfdf5;
+
 color:var(--green-dark);
 
 }
 
 
 
-/* TRUST */
-
+/* TRUST BAR */
 
 .trust{
 
 background:#ecfdf5;
+
 padding:18px;
+
 text-align:center;
+
 font-weight:600;
+
 color:#065f46;
 
 }
@@ -176,7 +197,6 @@ color:#065f46;
 
 
 /* SECTIONS */
-
 
 section{
 
@@ -188,7 +208,9 @@ padding:70px 0;
 h2{
 
 text-align:center;
+
 font-size:34px;
+
 margin-bottom:40px;
 
 }
@@ -198,34 +220,45 @@ margin-bottom:40px;
 .card{
 
 background:white;
+
 border:1px solid var(--border);
+
 border-radius:18px;
+
 padding:35px;
+
 margin-bottom:30px;
 
 box-shadow:
+
 0 10px 30px rgba(15,23,42,.06);
 
+transition:.3s;
+
 }
+
+
+.card:hover{
+
+transform:translateY(-4px);
+
+}
+
 
 
 
 .grid{
 
 display:grid;
+
 gap:25px;
 
 }
 
 
-@media(min-width:800px){
-
 .grid-3{
 
-grid-template-columns:
-repeat(3,1fr);
-
-}
+grid-template-columns:repeat(3,1fr);
 
 }
 
@@ -237,20 +270,30 @@ repeat(3,1fr);
 .btn{
 
 display:block;
+
 width:100%;
+
 padding:16px;
 
 background:var(--green);
+
 color:white;
 
 border:none;
+
 border-radius:10px;
 
 text-align:center;
+
 text-decoration:none;
 
 font-weight:700;
+
 cursor:pointer;
+
+transition:.3s;
+
+margin-top:20px;
 
 }
 
@@ -258,6 +301,8 @@ cursor:pointer;
 .btn:hover{
 
 background:var(--green-dark);
+
+transform:translateY(-2px);
 
 }
 
@@ -284,7 +329,9 @@ background:var(--whatsapp);
 label{
 
 font-weight:600;
+
 display:block;
+
 margin-top:15px;
 
 }
@@ -296,6 +343,7 @@ textarea{
 
 
 width:100%;
+
 padding:15px;
 
 border-radius:10px;
@@ -319,19 +367,32 @@ min-height:120px;
 
 
 
-.hidden{
+.form-box{
 
-display:none;
+margin-top:25px;
+
+padding-top:25px;
+
+border-top:1px solid var(--border);
 
 }
 
 
 
-.form-box{
+/* IMPORTANT NOTICE */
 
-margin-top:25px;
-padding-top:25px;
-border-top:1px solid var(--border);
+.notice{
+
+background:white;
+
+border-left:5px solid var(--green);
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:
+0 10px 25px rgba(15,23,42,.05);
 
 }
 
@@ -339,52 +400,180 @@ border-top:1px solid var(--border);
 
 /* FOOTER */
 
-
 footer{
 
 background:#0f172a;
+
 color:white;
+
 padding:60px 20px;
+
 text-align:center;
 
 }
 
 
 
-.whatsapp-float{
+footer a{
 
-position:fixed;
-right:25px;
-bottom:25px;
-
-height:65px;
-width:65px;
-
-border-radius:50%;
-
-background:#25D366;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:32px;
+color:#25D366;
 
 text-decoration:none;
 
 }
 
 
-</style>
 
+/* WHATSAPP */
+
+.whatsapp-float{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+height:60px;
+
+width:60px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:14px;
+
+font-weight:700;
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+
+
+/* ANIMATION */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(20px);
+
+transition:.7s ease;
+
+}
+
+
+.reveal.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+
+.grid-3{
+
+grid-template-columns:1fr;
+
+}
+
+
+header{
+
+padding:60px 0;
+
+}
+
+
+header h1{
+
+font-size:32px;
+
+}
+
+
+.subtitle{
+
+font-size:17px;
+
+}
+
+
+.nav{
+
+justify-content:flex-start;
+
+overflow-x:auto;
+
+flex-wrap:nowrap;
+
+}
+
+
+.nav a{
+
+white-space:nowrap;
+
+}
+
+
+section{
+
+padding:45px 0;
+
+}
+
+
+.card{
+
+padding:25px;
+
+}
+
+
+h2{
+
+font-size:28px;
+
+}
+
+
+.whatsapp-float{
+
+right:15px;
+
+bottom:15px;
+
+}
+
+}
+
+
+</style>
 
 </head>
 
 
 <body>
-
-
-
 <header>
 
 <div class="container">
@@ -396,28 +585,16 @@ BRIDGE MONEY SOLUTIONS NETWORK
 
 
 <p class="subtitle">
-Bridge Loans Agency | Premium Credit Advisory & Financial Intelligence
+Loan Consultancy | Credit Advisory | Financial Solutions
 </p>
 
 
 <div class="badges">
 
-<span>
-✓ Loan Consultancy
-</span>
-
-<span>
-✓ Vehicle Finance
-</span>
-
-<span>
-✓ CRB Advisory
-</span>
-
-<span>
-✓ Investigations
-</span>
-
+<span>Loan Consultancy</span>
+<span>Vehicle Finance</span>
+<span>CRB Services</span>
+<span>Investigations & Recoveries</span>
 
 </div>
 
@@ -433,14 +610,8 @@ Bridge Loans Agency | Premium Credit Advisory & Financial Intelligence
 
 <div class="nav">
 
-
-<a href="#services">
-Services
-</a>
-
-
-<a href="#loans">
-Loans
+<a href="#instant">
+Instant Loans
 </a>
 
 
@@ -449,8 +620,13 @@ Vehicle Finance
 </a>
 
 
+<a href="#loans">
+Loans
+</a>
+
+
 <a href="#crb">
-CRB
+CRB Services
 </a>
 
 
@@ -465,11 +641,13 @@ Investigations
 
 
 
+
 <div class="trust">
 
-Direct Lender Network | Credit Assessment | WhatsApp Support
+Direct Lender Network | Loan Application Support | WhatsApp Assistance
 
 </div>
+
 
 
 
@@ -480,12 +658,13 @@ Direct Lender Network | Credit Assessment | WhatsApp Support
 
 
 
-<section id="services">
+<section id="services" class="reveal">
 
 
 <h2>
 Choose A Service
 </h2>
+
 
 
 
@@ -495,35 +674,42 @@ Choose A Service
 
 <div class="card">
 
+
 <h3>
-Salary Loans
+Instant Loans
 </h3>
 
+
 <p>
-Civil servants, private sector employees, refinancing and salary advances.
+Quick access loan options from selected lending partners.
 </p>
 
-<a href="#loans" class="btn">
+
+<a href="#instant" class="btn">
 Apply
 </a>
+
 
 </div>
 
 
 
+
 <div class="card">
 
+
 <h3>
-Vehicle Loans
+Vehicle Finance
 </h3>
 
+
 <p>
-Loans using vehicles as collateral. Keep driving options available.
+Explore vehicle-backed financing options based on lender requirements.
 </p>
 
 
 <a href="#vehicle" class="btn">
-Apply
+Vehicle Assessment
 </a>
 
 
@@ -531,19 +717,68 @@ Apply
 
 
 
+
 <div class="card">
 
+
 <h3>
-CRB Intelligence
+Salary & Business Loans
 </h3>
 
+
 <p>
-Credit report analysis, disputes, correction guidance and strategy.
+Loan support for employees, entrepreneurs and businesses.
+</p>
+
+
+<a href="#loans" class="btn">
+Start Application
+</a>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h3>
+CRB Services
+</h3>
+
+
+<p>
+Credit report assistance, listing guidance and credit improvement support.
 </p>
 
 
 <a href="#crb" class="btn">
-Start Assessment
+CRB Assessment
+</a>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h3>
+Investigations & Recoveries
+</h3>
+
+
+<p>
+Financial reviews, document verification and recovery assistance.
+</p>
+
+
+<a href="#investigation" class="btn">
+Request Assistance
 </a>
 
 
@@ -560,7 +795,137 @@ Start Assessment
 
 
 
-<section id="loans">
+
+
+
+<section id="instant" class="reveal">
+
+
+<h2>
+Instant Loan Partners
+</h2>
+
+
+
+<div class="grid grid-3">
+
+
+
+<div class="card">
+
+
+<h3>
+ZamCash
+</h3>
+
+
+<p>
+Mobile loan solution.
+
+<br><br>
+
+Up to K500
+
+</p>
+
+
+
+<a href="https://www.zamcash.com/invite/475359"
+target="_blank"
+class="btn">
+
+Apply Now
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+ZamLoan
+</h3>
+
+
+<p>
+Salary based financing for eligible customers.
+
+<br><br>
+
+Up to K100,000
+
+</p>
+
+
+
+<a href="https://zamloan.com/invite/sms_zl_121670"
+target="_blank"
+class="btn btn-dark">
+
+Check Eligibility
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+BIU Money
+</h3>
+
+
+<p>
+Government employee financing solutions.
+
+<br><br>
+
+Up to K100,000
+
+</p>
+
+
+
+<a href="https://www.biumoney.com/invite/227556"
+target="_blank"
+class="btn btn-dark">
+
+Apply Now
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id="loans" class="reveal">
 
 
 <h2>
@@ -568,17 +933,19 @@ Salary & Business Loan Assessment
 </h2>
 
 
+
 <div class="card">
 
 
 <h3>
-Select Loan Category
+Choose Loan Category
 </h3>
 
 
 
 <select id="loanType"
 onchange="showLoanForm()">
+
 
 
 <option value="">
@@ -601,6 +968,11 @@ Salary Advance
 </option>
 
 
+<option value="Business Loan">
+Business Loan
+</option>
+
+
 <option value="Refinancing / Top Up">
 Refinancing / Top Up
 </option>
@@ -610,11 +982,12 @@ Refinancing / Top Up
 
 
 
+
 <div id="loanFormArea"
 class="form-box">
 
-
 </div>
+
 
 
 </div>
@@ -626,19 +999,26 @@ class="form-box">
 
 
 
-<section id="vehicle">
+
+
+
+
+<section id="vehicle" class="reveal">
 
 
 <h2>
-Vehicle Loan Assessment
+Vehicle Finance Assessment
 </h2>
+
 
 
 <div class="card">
 
 
+
 <select id="vehicleType"
 onchange="showVehicleForm()">
+
 
 
 <option value="">
@@ -646,13 +1026,15 @@ Choose vehicle option...
 </option>
 
 
-<option value="Vehicle Loan - No Parking">
-No Parking (Keep Driving)
+
+<option value="Vehicle Finance - Keep Driving">
+Vehicle Finance - Keep Driving
 </option>
 
 
-<option value="Vehicle Loan - Parking">
-Parking Loan
+
+<option value="Vehicle Finance - Parking">
+Vehicle Finance - Parking
 </option>
 
 
@@ -660,34 +1042,43 @@ Parking Loan
 
 
 
+
+
 <div id="vehicleFormArea"
 class="form-box">
 
-
 </div>
+
 
 
 </div>
 
 
 </section>
-<section id="crb">
+
+
+
+
+
+
+
+
+
+<section id="crb" class="reveal">
 
 
 <h2>
-CRB Intelligence Assessment
+CRB Services
 </h2>
+
 
 
 <div class="card">
 
 
-<h3>
-Credit Record Assistance
-</h3>
+<select id="crbType"
+onchange="showCRBForm()">
 
-
-<select id="crbType" onchange="showCRBForm()">
 
 
 <option value="">
@@ -695,28 +1086,48 @@ Choose CRB service...
 </option>
 
 
-<option value="CRB Report Analysis">
-CRB Report Analysis
+<option value="CRB Report Retrieval Analysis Advisory">
+1. CRB Report Retrieval, Analysis & Advisory
 </option>
 
 
-<option value="CRB Listing Assistance">
-CRB Listing Assistance
+<option value="CRB Clearance Guidance">
+2. Clearance Guidance
 </option>
 
 
-<option value="Unknown Loan Investigation">
-Unknown Loan Investigation
+<option value="CRB Listing Tracing and Identification">
+3. Listing Tracing and Identification
 </option>
 
 
-<option value="Credit Improvement Strategy">
-Credit Improvement Strategy
+<option value="CRB Report Assessment Interpretation">
+4. CRB Report Assessment and Interpretation
 </option>
 
 
-<option value="CRB Error Correction Guidance">
-CRB Error Correction Guidance
+<option value="CRB Report Errors Correction Details Mismatch">
+5. CRB Report Errors Correction / Details Mismatch
+</option>
+
+
+<option value="Identity NRC Conflict Investigations">
+6. Identity & NRC Conflict Investigations
+</option>
+
+
+<option value="Document Preparation Lender Contacting">
+7. Document Preparation & Lender Contacting
+</option>
+
+
+<option value="Credit Access Strategy">
+8. Credit Access Strategy
+</option>
+
+
+<option value="Clearance Letters Loan Statements Payslips Retrieval">
+9. Clearance Letters + Loan Statements + Payslips + Bank Statement + T-pin Certificate Retrieval Assistance
 </option>
 
 
@@ -724,8 +1135,8 @@ CRB Error Correction Guidance
 
 
 
-<div id="crbFormArea" class="form-box">
-
+<div id="crbFormArea"
+class="form-box">
 
 </div>
 
@@ -735,16 +1146,11 @@ CRB Error Correction Guidance
 
 
 </section>
-
-
-
-
-
-<section id="investigation">
+<section id="investigation" class="reveal">
 
 
 <h2>
-Financial Investigation & Recovery
+Investigations & Recoveries
 </h2>
 
 
@@ -753,8 +1159,9 @@ Financial Investigation & Recovery
 
 
 <h3>
-Select Investigation Service
+Select Service
 </h3>
+
 
 
 <select id="investigationType"
@@ -774,14 +1181,14 @@ Unknown Loan Investigation
 
 
 
-<option value="Unauthorized Deduction Investigation">
-Unauthorized Deduction Investigation
+<option value="Unauthorized Deduction Review">
+Unauthorized Deduction Review
 </option>
 
 
 
-<option value="Money Recovery">
-Money Recovery
+<option value="Money Recovery Assistance">
+Money Recovery Assistance
 </option>
 
 
@@ -792,8 +1199,14 @@ Document Verification
 
 
 
-<option value="Financial Fraud Investigation">
-Financial Fraud Investigation
+<option value="Identity Verification">
+Identity Verification
+</option>
+
+
+
+<option value="Financial Matter Review">
+Financial Matter Review
 </option>
 
 
@@ -806,7 +1219,6 @@ Financial Fraud Investigation
 <div id="investigationFormArea"
 class="form-box">
 
-
 </div>
 
 
@@ -820,10 +1232,12 @@ class="form-box">
 
 
 
-<section>
 
 
-<div class="card">
+<section class="reveal">
+
+
+<div class="notice">
 
 
 <h3>
@@ -831,10 +1245,9 @@ Important Notice
 </h3>
 
 
-
 <p>
 
-Bridge Money Solutions Network is a credit advisory and facilitation service.
+Bridge Money Solutions Network provides loan consultancy and connects clients with suitable financial solutions.
 
 </p>
 
@@ -844,17 +1257,7 @@ Bridge Money Solutions Network is a credit advisory and facilitation service.
 
 <p>
 
-Loan approval, interest rates and disbursement decisions are made by licensed lenders according to their own requirements.
-
-</p>
-
-
-<br>
-
-
-<p>
-
-We provide credit assessment, introductions, advisory and financial intelligence services.
+Loan approval, terms and disbursement are determined by individual lenders according to their requirements.
 
 </p>
 
@@ -866,7 +1269,11 @@ We provide credit assessment, introductions, advisory and financial intelligence
 
 
 
+
+
 </main>
+
+
 
 
 
@@ -881,7 +1288,7 @@ Bridge Money Solutions Network
 
 
 <p>
-Financial Intelligence & Credit Access Strategist
+Loan Consultancy | Credit Advisory | Financial Solutions
 </p>
 
 
@@ -889,15 +1296,17 @@ Financial Intelligence & Credit Access Strategist
 
 
 <p>
+
 WhatsApp:
-<a style="color:#25D366"
-href="https://wa.me/260976605457">
+
+<a href="https://wa.me/260976605457">
 
 0976605457
 
 </a>
 
 </p>
+
 
 
 <br>
@@ -907,13 +1316,11 @@ href="https://wa.me/260976605457">
 
 Email:
 
-<a style="color:white"
-href="mailto:bridgemoneysolutions@gmail.com">
+<a href="mailto:bridgemoneysolutions@gmail.com">
 
 bridgemoneysolutions@gmail.com
 
 </a>
-
 
 </p>
 
@@ -923,14 +1330,19 @@ bridgemoneysolutions@gmail.com
 
 
 
+
 <a 
 class="whatsapp-float"
 href="https://wa.me/260976605457"
 target="_blank">
 
-💬
+WhatsApp
 
 </a>
+
+
+
+
 
 
 
@@ -949,23 +1361,20 @@ const FORMSPREE_URL =
 function createDynamicForm(service,fields){
 
 
-
 let html = `
 
 
-<form 
-onsubmit="sendLead(event,this)">
+<form onsubmit="sendLead(event,this)">
 
 
 
-<input 
-type="hidden"
+<input type="hidden"
 name="Service"
 value="${service}">
 
 
-<input 
-type="hidden"
+
+<input type="hidden"
 name="Source"
 value="Bridge Money Solutions Website">
 
@@ -973,13 +1382,11 @@ value="Bridge Money Solutions Website">
 
 <h3>
 ${service}
-Application
 </h3>
 
 
 
 `;
-
 
 
 
@@ -994,19 +1401,14 @@ ${field}
 </label>
 
 
-<input
-
+<input 
 type="text"
-
 name="${field}"
-
 placeholder="Enter ${field}"
-
 required>
 
 
 `;
-
 
 
 });
@@ -1019,23 +1421,20 @@ html += `
 
 
 <label>
-Additional Information
+Additional Details
 </label>
 
 
-<textarea
 
+<textarea 
 name="Additional Details"
-
 placeholder="Explain your situation">
 
 </textarea>
 
 
 
-
-<button 
-class="btn btn-whatsapp"
+<button class="btn btn-whatsapp"
 type="submit">
 
 Submit Application
@@ -1043,8 +1442,8 @@ Submit Application
 </button>
 
 
-</form>
 
+</form>
 
 `;
 
@@ -1062,18 +1461,12 @@ return html;
 
 
 
-
 function showLoanForm(){
 
 
+let choice=document.getElementById("loanType").value;
 
-let choice =
-document.getElementById("loanType").value;
-
-
-
-let box =
-document.getElementById("loanFormArea");
+let box=document.getElementById("loanFormArea");
 
 
 
@@ -1087,9 +1480,7 @@ return;
 
 
 
-
-box.innerHTML =
-createDynamicForm(
+box.innerHTML=createDynamicForm(
 
 choice,
 
@@ -1111,6 +1502,7 @@ choice,
 
 ]
 
+
 );
 
 
@@ -1128,14 +1520,9 @@ choice,
 function showVehicleForm(){
 
 
+let choice=document.getElementById("vehicleType").value;
 
-let choice =
-document.getElementById("vehicleType").value;
-
-
-
-let box =
-document.getElementById("vehicleFormArea");
+let box=document.getElementById("vehicleFormArea");
 
 
 
@@ -1150,9 +1537,7 @@ return;
 
 
 
-
-box.innerHTML =
-createDynamicForm(
+box.innerHTML=createDynamicForm(
 
 choice,
 
@@ -1168,13 +1553,14 @@ choice,
 
 "Vehicle Year",
 
-"White Book In Your Name",
+"White Book Status (Yes / No / In Progress)",
 
 "Loan Amount Needed",
 
 "Location"
 
 ]
+
 
 );
 
@@ -1193,14 +1579,9 @@ choice,
 function showCRBForm(){
 
 
+let choice=document.getElementById("crbType").value;
 
-let choice =
-document.getElementById("crbType").value;
-
-
-
-let box =
-document.getElementById("crbFormArea");
+let box=document.getElementById("crbFormArea");
 
 
 
@@ -1215,9 +1596,7 @@ return;
 
 
 
-
-box.innerHTML =
-createDynamicForm(
+box.innerHTML=createDynamicForm(
 
 choice,
 
@@ -1232,6 +1611,7 @@ choice,
 "Location"
 
 ]
+
 
 );
 
@@ -1250,14 +1630,9 @@ choice,
 function showInvestigationForm(){
 
 
+let choice=document.getElementById("investigationType").value;
 
-let choice =
-document.getElementById("investigationType").value;
-
-
-
-let box =
-document.getElementById("investigationFormArea");
+let box=document.getElementById("investigationFormArea");
 
 
 
@@ -1272,9 +1647,7 @@ return;
 
 
 
-
-box.innerHTML =
-createDynamicForm(
+box.innerHTML=createDynamicForm(
 
 choice,
 
@@ -1292,11 +1665,17 @@ choice,
 
 ]
 
+
 );
 
 
 
 }
+
+
+
+
+
 
 
 
@@ -1308,9 +1687,7 @@ event.preventDefault();
 
 
 
-const button =
-form.querySelector("button");
-
+let button=form.querySelector("button");
 
 
 button.disabled=true;
@@ -1319,17 +1696,14 @@ button.innerHTML="Submitting...";
 
 
 
-
-const formData =
-new FormData(form);
+let formData=new FormData(form);
 
 
 
 try{
 
 
-const response =
-await fetch(
+let response=await fetch(
 
 FORMSPREE_URL,
 
@@ -1341,14 +1715,13 @@ body:formData,
 
 headers:{
 
-"Accept":"application/json"
+Accept:"application/json"
 
 }
 
 }
 
 );
-
 
 
 
@@ -1360,21 +1733,17 @@ if(response.ok){
 let data={};
 
 
+formData.forEach((value,key)=>{
 
-formData.forEach(
-(item,value)=>{
+data[key]=value;
 
-data[value]=item;
-
-}
-
-);
+});
 
 
 
 
 
-const message =
+let message=
 
 `BRIDGE MONEY SOLUTIONS APPLICATION
 
@@ -1401,66 +1770,34 @@ Please assist me with my application.`;
 
 
 
+window.location.href=
 
-window.location.href =
 "https://wa.me/260976605457?text="+
+
 encodeURIComponent(message);
 
 
 
-
-alert(
-
-"Application submitted successfully. WhatsApp will open now."
-
-);
-
-
-
-
-
-form.reset();
-
-
-
 }
+
 
 else{
 
 
-alert(
-
-"Submission failed. Please try again."
-
-);
-
+alert("Submission failed. Please try again.");
 
 }
 
 
-
 }
-
 
 
 catch(error){
 
 
-console.error(error);
-
-
-
-alert(
-
-"Network error. Please try again."
-
-);
-
-
+alert("Network error. Please try again.");
 
 }
-
-
 
 
 
@@ -1473,6 +1810,47 @@ button.innerHTML="Submit Application";
 }
 
 
+
+
+
+
+
+
+// SIMPLE SCROLL ANIMATION
+
+const observer=new IntersectionObserver(
+
+(entries)=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+
+});
+
+
+},
+
+{
+
+threshold:.15
+
+}
+
+);
+
+
+
+document.querySelectorAll(".reveal")
+
+.forEach(el=>observer.observe(el));
 
 
 
