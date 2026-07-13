@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bridge Money Solutions Network - Premium Credit Advisory Zambia</title>
+<title>
+Bridge Money Solutions Network | Credit Advisory Zambia
+</title>
 
-<meta name="description" content="Bridge Money Solutions Network - Loan Consultancy, Vehicle Loans, CRB Advisory Services, Financial Investigations Zambia">
+<meta name="description" content="
+Bridge Money Solutions Network provides loan consultancy, vehicle finance, CRB advisory, financial investigations and credit solutions in Zambia.
+">
 
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+
 :root{
---bg-dark:#0f172a;
---bg-card:#1e293b;
---bg-input:#0f172a;
---primary:#f8fafc;
---text:#f1f5f9;
---text-muted:#94a3b8;
---accent:#10b981;
---accent-hover:#059669;
+
+--primary:#0f172a;
+--secondary:#1e293b;
+--card:#ffffff;
+--text:#0f172a;
+--muted:#64748b;
+--green:#10b981;
+--green-dark:#059669;
 --whatsapp:#25D366;
---border:#334155;
---gold:#d97706;
---gradient:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);
+--border:#e2e8f0;
+--background:#f8fafc;
+
 }
+
 
 *{
 margin:0;
@@ -34,673 +41,514 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
 
 body{
-font-family:'Inter',Arial,sans-serif;
-line-height:1.7;
+
+font-family:Inter,Arial,sans-serif;
+background:var(--background);
 color:var(--text);
-background:var(--gradient);
+line-height:1.6;
+
 }
+
 
 .container{
-max-width:920px;
+
+max-width:1100px;
 margin:auto;
-padding:0 24px;
+padding:0 22px;
+
 }
+
+
+/* HEADER */
 
 header{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-padding:70px 0 35px;
+
+background:
+linear-gradient(135deg,#0f172a,#1e293b);
+
+color:white;
+padding:80px 0;
 text-align:center;
-border-bottom:1px solid var(--border);
+
 }
+
 
 header h1{
-font-size:40px;
+
+font-size:42px;
 font-weight:800;
-margin-bottom:12px;
+margin-bottom:15px;
+
 }
 
-.sub{
-font-size:18px;
+
+.subtitle{
+
+font-size:20px;
 opacity:.85;
+
 }
 
-.badge{
-background:rgba(16,185,129,.12);
-border:1px solid rgba(16,185,129,.25);
-color:var(--accent);
+
+.badges{
+
+margin-top:25px;
+
+}
+
+
+.badges span{
+
 display:inline-block;
-padding:9px 18px;
-border-radius:8px;
-margin-top:18px;
-font-size:13px;
-font-weight:600;
+background:rgba(16,185,129,.15);
+border:1px solid rgba(16,185,129,.4);
+padding:8px 15px;
+border-radius:30px;
+margin:5px;
+font-size:14px;
+color:#6ee7b7;
+
 }
 
-.nav-sticky{
+
+
+/* NAV */
+
+
+nav{
+
 position:sticky;
 top:0;
-background:rgba(15,23,42,.92);
-padding:18px 0;
+z-index:999;
+
+background:white;
 border-bottom:1px solid var(--border);
-z-index:1000;
+
 }
 
-.nav-row{
+
+.nav{
+
 display:flex;
-gap:12px;
 justify-content:center;
+gap:15px;
 flex-wrap:wrap;
+padding:15px;
+
 }
 
-.nav-btn{
-color:white;
-border:1px solid var(--border);
-padding:11px 24px;
-border-radius:8px;
+
+.nav a{
+
 text-decoration:none;
+color:var(--text);
 font-weight:600;
+padding:10px 18px;
+border-radius:8px;
+
 }
 
-.nav-btn:hover{
-background:var(--accent);
+
+.nav a:hover{
+
+background:#ecfdf5;
+color:var(--green-dark);
+
 }
 
-.trust-bar{
-text-align:center;
+
+
+/* TRUST */
+
+
+.trust{
+
+background:#ecfdf5;
 padding:18px;
-background:#1e293b;
-color:var(--text-muted);
+text-align:center;
+font-weight:600;
+color:#065f46;
+
 }
+
+
+
+/* SECTIONS */
+
 
 section{
+
 padding:70px 0;
+
 }
+
 
 h2{
-font-size:32px;
+
 text-align:center;
+font-size:34px;
 margin-bottom:40px;
+
 }
 
-h3{
-font-size:22px;
-margin-bottom:16px;
-}
+
 
 .card{
-background:var(--bg-card);
-padding:36px;
-border-radius:14px;
-margin-bottom:28px;
+
+background:white;
 border:1px solid var(--border);
+border-radius:18px;
+padding:35px;
+margin-bottom:30px;
+
+box-shadow:
+0 10px 30px rgba(15,23,42,.06);
+
 }
+
+
 
 .grid{
+
 display:grid;
-gap:28px;
+gap:25px;
+
 }
 
-@media(min-width:720px){
+
+@media(min-width:800px){
+
 .grid-3{
-grid-template-columns:repeat(3,1fr);
-}
+
+grid-template-columns:
+repeat(3,1fr);
+
 }
 
-.hot-tag{
-background:var(--gold);
-padding:7px 16px;
-border-radius:6px;
-font-size:11px;
-font-weight:700;
-display:inline-block;
-margin-bottom:15px;
 }
+
+
+
+/* BUTTONS */
+
 
 .btn{
+
 display:block;
 width:100%;
-padding:18px;
-background:var(--accent);
+padding:16px;
+
+background:var(--green);
 color:white;
+
+border:none;
+border-radius:10px;
+
 text-align:center;
 text-decoration:none;
-border-radius:10px;
-font-weight:600;
-margin-top:20px;
-border:none;
+
+font-weight:700;
 cursor:pointer;
+
 }
+
 
 .btn:hover{
-background:var(--accent-hover);
+
+background:var(--green-dark);
+
 }
 
-.btn-secondary{
+
+
+.btn-dark{
+
 background:#334155;
+
 }
+
 
 .btn-whatsapp{
+
 background:var(--whatsapp);
+
 }
 
-.requirements{
-color:var(--text-muted);
-margin:15px 0;
-}
 
-input,select,textarea{
-width:100%;
-padding:17px;
-margin:12px 0 22px;
-border-radius:10px;
-border:1px solid var(--border);
-background:var(--bg-input);
-color:white;
-font-size:16px;
-}
+
+/* FORMS */
+
 
 label{
+
 font-weight:600;
 display:block;
+margin-top:15px;
+
 }
 
-.radio-group{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-margin:15px 0;
-}
 
-.radio-group input{
-width:auto;
-margin:0;
-}
+input,
+select,
+textarea{
 
-.info-box{
-background:rgba(16,185,129,.08);
-border-left:4px solid var(--accent);
-padding:18px;
+
+width:100%;
+padding:15px;
+
 border-radius:10px;
-margin:15px 0;
+
+border:1px solid var(--border);
+
+font-size:16px;
+
+margin-top:8px;
+
+background:white;
+
 }
+
+
+textarea{
+
+min-height:120px;
+
+}
+
+
+
+.hidden{
+
+display:none;
+
+}
+
+
+
+.form-box{
+
+margin-top:25px;
+padding-top:25px;
+border-top:1px solid var(--border);
+
+}
+
+
+
+/* FOOTER */
+
 
 footer{
+
 background:#0f172a;
+color:white;
+padding:60px 20px;
 text-align:center;
-padding:70px 20px;
-color:var(--text-muted);
+
 }
 
-.sticky-cta{
+
+
+.whatsapp-float{
+
 position:fixed;
-right:32px;
-bottom:32px;
-width:70px;
-height:70px;
+right:25px;
+bottom:25px;
+
+height:65px;
+width:65px;
+
 border-radius:50%;
+
 background:#25D366;
+
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:35px;
+
+font-size:32px;
+
 text-decoration:none;
+
 }
+
 
 </style>
 
+
 </head>
 
+
 <body>
+
+
 
 <header>
 
 <div class="container">
 
+
 <h1>
 BRIDGE MONEY SOLUTIONS NETWORK
 </h1>
 
-<div class="sub">
-Bridge Loans Agency | Premium Credit Advisory Services
+
+<p class="subtitle">
+Bridge Loans Agency | Premium Credit Advisory & Financial Intelligence
+</p>
+
+
+<div class="badges">
+
+<span>
+✓ Loan Consultancy
+</span>
+
+<span>
+✓ Vehicle Finance
+</span>
+
+<span>
+✓ CRB Advisory
+</span>
+
+<span>
+✓ Investigations
+</span>
+
+
 </div>
 
-<div class="badge">
-✓ Loan Consultancy 
-✓ CRB Advisory Services 
-✓ Vehicle Loans 
-✓ Financial Investigations & Recoveries
-</div>
 
 </div>
 
 </header>
 
 
-<nav class="nav-sticky">
 
-<div class="container">
 
-<div class="nav-row">
+<nav>
 
-<a href="#loans" class="nav-btn">Instant Loans</a>
+<div class="nav">
 
-<a href="#collateral" class="nav-btn">Vehicle Loans</a>
 
-<a href="#crb" class="nav-btn">CRB Services</a>
+<a href="#services">
+Services
+</a>
 
-<a href="#investigations" class="nav-btn">Investigations</a>
 
-</div>
+<a href="#loans">
+Loans
+</a>
+
+
+<a href="#vehicle">
+Vehicle Finance
+</a>
+
+
+<a href="#crb">
+CRB
+</a>
+
+
+<a href="#investigation">
+Investigations
+</a>
+
 
 </div>
 
 </nav>
 
 
-<div class="trust-bar">
 
-Direct Lender Network | Zero Upfront Fees | 24Hrs WhatsApp Support | Instant Loans
+<div class="trust">
+
+Direct Lender Network | Credit Assessment | WhatsApp Support
 
 </div>
+
+
 
 
 <main class="container">
 
 
-<section id="loans">
+
+
+
+<section id="services">
+
 
 <h2>
-Instant Mobile Money Loans - Approved in 5 Minutes
+Choose A Service
 </h2>
+
 
 
 <div class="grid grid-3">
 
 
-<div class="card">
-
-<div class="hot-tag">
-Fastest
-</div>
-
-<h3>ZAMCASH upto K500</h3>
-
-<p class="requirements">
-Requirements: NRC + Mobile Money Number
-<br>
-<strong>Instant disbursement 24/7</strong>
-</p>
-
-<a href="https://www.zamcash.com/invite/475359" class="btn" target="_blank">
-Apply in 60 Seconds
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>ZAMLOAN upto K100,000</h3>
-
-<p class="requirements">
-Civil Servants & Defence Personnel
-<br>
-NRC + Payslip + Bank/Mobile Money
-</p>
-
-<a href="https://zamloan.com/invite/sms_zl_121670" class="btn btn-secondary" target="_blank">
-Check Eligibility
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>BIU MONEY upto K100,000</h3>
-
-<p class="requirements">
-For GRZ Employees Only
-<br>
-NRC + Payslip + Bank/Mobile Money
-</p>
-
-<a href="https://www.biumoney.com/invite/227556" class="btn btn-secondary" target="_blank">
-Apply Now
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-<section id="collateral">
-
-<h2>
-Vehicle Loan Application - Keep Driving or Park
-</h2>
-
 
 <div class="card">
 
 <h3>
-Complete Your Application Below
+Salary Loans
 </h3>
 
+<p>
+Civil servants, private sector employees, refinancing and salary advances.
+</p>
 
-<form id="vehicleForm"
-action="https://formspree.io/f/mgogwdok"
-method="POST"
-onsubmit="submitVehicleLoan(event,this)">
-
-
-<input type="hidden" name="Service" value="Vehicle Loan Application">
-<input type="hidden" name="Source" value="Bridge Website">
-
-
-<label>Full Name:</label>
-
-<input 
-type="text"
-name="Full Name"
-placeholder="Enter your full name"
-required>
-
-
-<label>Phone Number:</label>
-
-<input
-type="tel"
-name="Phone Number"
-placeholder="097xxxxxxx"
-required>
-
-
-<label>NRC Number:</label>
-
-<input
-type="text"
-name="NRC Number"
-placeholder="Enter NRC number"
-required>
-
-
-<label>Email:</label>
-
-<input
-type="email"
-name="Email"
-placeholder="Enter email address">
-
-
-<label>
-1. Select Loan Type:
-</label>
-
-
-<div class="radio-group">
-
-<label>
-<input type="radio" name="parking" value="NO PARKING" checked>
-NO PARKING - You keep driving
-</label>
-
-
-<label>
-<input type="radio" name="parking" value="PARKING">
-PARKING - Car stays with lender
-</label>
+<a href="#loans" class="btn">
+Apply
+</a>
 
 </div>
-
-
-<div class="info-box">
-
-<strong>NO PARKING:</strong> Lender holds White Book only. You keep using your car.
-
-<br><br>
-
-<strong>PARKING:</strong> Lender holds both Car + White Book until loan cleared.
-
-</div>
-
-
-
-<label>
-2. Loan Amount Needed (K):
-</label>
-
-<input
-type="number"
-id="amount"
-name="Loan Amount"
-placeholder="e.g. 50000"
-min="5000"
-required>
-
-
-
-<label>
-3. Your Location:
-</label>
-
-<input
-type="text"
-id="location"
-name="Location"
-placeholder="e.g. Lusaka, Kabwe, Ndola"
-required>
-
-
-
-<label>
-4. Vehicle Make, Model & Year:
-</label>
-
-<input
-type="text"
-id="carDetails"
-name="Vehicle Details"
-placeholder="e.g. Toyota Corolla 2018"
-required>
-
-
-
-<label>
-5. Is the White Book registered in your name?
-</label>
-
-
-<div class="radio-group">
-
-<label>
-
-<input
-type="radio"
-name="whitebookName"
-value="Yes"
-checked>
-
-Yes, in my name
-
-</label>
-
-
-<label>
-
-<input
-type="radio"
-name="whitebookName"
-value="No">
-
-No, not in my name
-
-</label>
-
-</div>
-
-
-
-<label>
-6. Do you have the original white book?
-</label>
-
-
-<div class="radio-group">
-
-
-<label>
-
-<input
-type="radio"
-name="whitebookAvailable"
-value="Yes"
-checked>
-
-Yes, I have it
-
-</label>
-
-
-
-<label>
-
-<input
-type="radio"
-name="whitebookAvailable"
-value="No">
-
-No, I don't have it
-
-</label>
-
-
-</div>
-
-
-
-<div class="info-box">
-
-After clicking Submit, WhatsApp will open with your details.
-
-Please send clear pictures of the car + white book.
-
-<strong>
-Expect feedback within 2 hours.
-</strong>
-
-</div>
-
-
-<button type="submit" class="btn btn-whatsapp">
-
-Submit Application
-
-</button>
-
-
-</form>
-
-</div>
-
 
 
 
 <div class="card">
 
 <h3>
-Other Collateral Application
+Vehicle Loans
 </h3>
 
-
-<form id="otherCollateralForm"
-action="https://formspree.io/f/mgogwdok"
-method="POST"
-onsubmit="submitOtherCollateral(event,this)">
+<p>
+Loans using vehicles as collateral. Keep driving options available.
+</p>
 
 
+<a href="#vehicle" class="btn">
+Apply
+</a>
 
-<input type="hidden" name="Service" value="Other Collateral Loan">
-
-<input type="hidden" name="Source" value="Bridge Website">
-
-
-
-<label>
-Collateral Type:
-</label>
-
-
-<input
-type="text"
-id="collateralType"
-name="Collateral Type"
-placeholder="House, Land, TV, Laptop, Fridge"
-required>
-
-
-
-<label>
-Loan Amount Needed (K):
-</label>
-
-
-<input
-type="number"
-id="otherAmount"
-name="Loan Amount"
-placeholder="e.g. 25000"
-min="500"
-required>
-
-
-
-<label>
-Your Location:
-</label>
-
-
-<input
-type="text"
-id="otherLocation"
-name="Location"
-placeholder="e.g. Lusaka, Kabwe"
-required>
-
-
-
-<div class="info-box">
-
-<strong>
-After verification
-</strong>
-
-send clear pictures, proof of ownership receipt or title deed on WhatsApp.
-
-<br><br>
-
-<strong>
-Expect feedback within 2 hours.
-</strong>
 
 </div>
 
 
 
-<button type="submit" class="btn btn-whatsapp">
+<div class="card">
 
-Submit Application
+<h3>
+CRB Intelligence
+</h3>
 
-</button>
+<p>
+Credit report analysis, disputes, correction guidance and strategy.
+</p>
 
 
-</form>
+<a href="#crb" class="btn">
+Start Assessment
+</a>
+
+
+</div>
+
 
 
 </div>
@@ -710,422 +558,124 @@ Submit Application
 
 
 
-<section id="loan-enquiry">
+
+
+<section id="loans">
+
 
 <h2>
-Civil Servants & Private Sector Loan Assessment
+Salary & Business Loan Assessment
 </h2>
 
 
 <div class="card">
 
+
 <h3>
-Complete Loan Assessment Form
+Select Loan Category
 </h3>
 
 
-<form 
-action="https://formspree.io/f/mgogwdok"
-method="POST">
+
+<select id="loanType"
+onchange="showLoanForm()">
 
 
-<input type="hidden" name="Service" value="Loan Assessment Lead">
-
-<input type="hidden" name="Source" value="Bridge Website">
-
-
-
-<label>Full Name</label>
-
-<input 
-type="text"
-name="Full Name"
-placeholder="Your full name"
-required>
+<option value="">
+Choose service...
+</option>
 
 
-
-<label>Phone Number / WhatsApp</label>
-
-<input
-type="tel"
-name="Phone"
-placeholder="097xxxxxxx"
-required>
+<option value="Civil Servant Loan">
+Civil Servant Loan
+</option>
 
 
+<option value="Private Sector Loan">
+Private Sector Loan
+</option>
 
 
-<label>Location</label>
-
-<input
-type="text"
-name="Location"
-placeholder="Lusaka, Ndola, Kitwe..."
-required>
+<option value="Salary Advance">
+Salary Advance
+</option>
 
 
+<option value="Refinancing / Top Up">
+Refinancing / Top Up
+</option>
 
-
-<label>Employment Type</label>
-
-<select name="Employment Type">
-
-<option>Civil Servant</option>
-
-<option>Private Sector Employee</option>
-
-<option>Business Owner</option>
-
-<option>Self Employed</option>
 
 </select>
 
 
 
-
-<label>Monthly Income Range</label>
-
-<select name="Income Range">
-
-<option>Below K3,000</option>
-
-<option>K3,000 - K5,000</option>
-
-<option>K5,000 - K10,000</option>
-
-<option>Above K10,000</option>
-
-</select>
-
-
-
-
-<label>Loan Amount Needed</label>
-
-
-<input
-type="number"
-name="Loan Amount"
-placeholder="Example K50,000"
-required>
-
-
-
-
-<label>Purpose Of Loan</label>
-
-
-<select name="Loan Purpose">
-
-<option>Business</option>
-
-<option>Vehicle</option>
-
-<option>School Fees</option>
-
-<option>Emergency</option>
-
-<option>Debt Consolidation</option>
-
-<option>Other</option>
-
-</select>
-
-
-
-
-<label>Current CRB Status</label>
-
-
-<select name="CRB Status">
-
-<option>Clean</option>
-
-<option>Listed but want assistance</option>
-
-<option>Not sure</option>
-
-</select>
-
-
-
-
-<label>Do you currently have loans?</label>
-
-
-<select name="Existing Loans">
-
-<option>No</option>
-
-<option>Yes</option>
-
-</select>
-
-
-
-<label>Additional Information</label>
-
-
-<textarea
-name="Message"
-placeholder="Explain your situation briefly">
-</textarea>
-
-
-
-<button class="btn btn-whatsapp" type="submit">
-
-Submit Assessment
-
-</button>
-
-
-
-</form>
+<div id="loanFormArea"
+class="form-box">
 
 
 </div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section id="vehicle">
+
+
+<h2>
+Vehicle Loan Assessment
+</h2>
+
+
+<div class="card">
+
+
+<select id="vehicleType"
+onchange="showVehicleForm()">
+
+
+<option value="">
+Choose vehicle option...
+</option>
+
+
+<option value="Vehicle Loan - No Parking">
+No Parking (Keep Driving)
+</option>
+
+
+<option value="Vehicle Loan - Parking">
+Parking Loan
+</option>
+
+
+</select>
+
+
+
+<div id="vehicleFormArea"
+class="form-box">
+
+
+</div>
+
+
+</div>
+
 
 </section>
 <section id="crb">
 
-<h2>
-CRB Intelligence & Credit Recovery Assessment
-</h2>
-
-
-<div class="card">
-
-<h3>
-Find Out Your Credit Problem
-</h3>
-
-
-<form 
-action="https://formspree.io/f/mgogwdok"
-method="POST">
-
-
-<input type="hidden" name="Service" value="CRB Intelligence Assessment">
-
-<input type="hidden" name="Source" value="Bridge Website">
-
-
-
-<label>
-Full Name
-</label>
-
-
-<input
-type="text"
-name="Full Name"
-placeholder="Enter your full name"
-required>
-
-
-
-<label>
-Phone Number / WhatsApp
-</label>
-
-
-<input
-type="tel"
-name="Phone"
-placeholder="097xxxxxxx"
-required>
-
-
-
-
-<label>
-Location
-</label>
-
-
-<input
-type="text"
-name="Location"
-placeholder="Town/City"
-required>
-
-
-
-
-<label>
-Select Your CRB Issue
-</label>
-
-
-<select name="CRB Issue">
-
-
-<option>
-CRB Listing / Blacklisted
-</option>
-
-
-<option>
-Unknown Loan Showing
-</option>
-
-
-<option>
-Identity / NRC Conflict
-</option>
-
-
-<option>
-Wrong Information On Report
-</option>
-
-
-<option>
-Paid Loan Still Showing
-</option>
-
-
-<option>
-Need CRB Report Interpretation
-</option>
-
-
-<option>
-Need Credit Improvement Strategy
-</option>
-
-
-</select>
-
-
-
-
-<label>
-Do you know which institution listed you?
-</label>
-
-
-<select name="Institution Known">
-
-
-<option>
-Yes
-</option>
-
-
-<option>
-No
-</option>
-
-
-<option>
-Not Sure
-</option>
-
-
-</select>
-
-
-
-
-<label>
-Have you checked your CRB report before?
-</label>
-
-
-<select name="CRB Report">
-
-<option>
-Yes
-</option>
-
-<option>
-No
-</option>
-
-<option>
-Need assistance getting report
-</option>
-
-</select>
-
-
-
-
-<label>
-What is your goal?
-</label>
-
-
-<select name="Goal">
-
-
-<option>
-Clear CRB Issues
-</option>
-
-
-<option>
-Understand My Report
-</option>
-
-
-<option>
-Qualify For A Loan
-</option>
-
-
-<option>
-Investigate Unknown Loan
-</option>
-
-
-<option>
-Recover Money / Dispute
-</option>
-
-
-</select>
-
-
-
-
-<label>
-Additional Details
-</label>
-
-
-<textarea
-name="Details"
-placeholder="Explain your issue">
-</textarea>
-
-
-
-
-<button 
-type="submit"
-class="btn btn-whatsapp">
-
-Submit CRB Assessment
-
-</button>
-
-
-</form>
-
-
-</div>
-
-
-</section>
-
-<section id="investigations">
 
 <h2>
-Financial Investigation & Recovery Assessment
+CRB Intelligence Assessment
 </h2>
 
 
@@ -1133,105 +683,40 @@ Financial Investigation & Recovery Assessment
 
 
 <h3>
-Tell Us What Needs Investigation
+Credit Record Assistance
 </h3>
 
 
-
-<form
-action="https://formspree.io/f/mgogwdok"
-method="POST">
+<select id="crbType" onchange="showCRBForm()">
 
 
-<input type="hidden" name="Service" value="Financial Investigation Lead">
-
-<input type="hidden" name="Source" value="Bridge Website">
-
-
-
-<label>
-Full Name
-</label>
+<option value="">
+Choose CRB service...
+</option>
 
 
-<input
-type="text"
-name="Full Name"
-placeholder="Your full name"
-required>
+<option value="CRB Report Analysis">
+CRB Report Analysis
+</option>
 
 
+<option value="CRB Listing Assistance">
+CRB Listing Assistance
+</option>
 
 
-<label>
-Phone Number / WhatsApp
-</label>
-
-
-<input
-type="tel"
-name="Phone"
-placeholder="097xxxxxxx"
-required>
-
-
-
-
-<label>
-Location
-</label>
-
-
-<input
-type="text"
-name="Location"
-placeholder="Lusaka, Ndola, Kitwe..."
-required>
-
-
-
-
-
-<label>
-Investigation Type
-</label>
-
-
-<select name="Investigation Type">
-
-
-<option>
+<option value="Unknown Loan Investigation">
 Unknown Loan Investigation
 </option>
 
 
-<option>
-Unauthorized Deductions
+<option value="Credit Improvement Strategy">
+Credit Improvement Strategy
 </option>
 
 
-<option>
-Money Recovery
-</option>
-
-
-<option>
-Tracing Missing Funds
-</option>
-
-
-<option>
-Loan Fraud Investigation
-</option>
-
-
-<option>
-Document Verification
-</option>
-
-
-<option>
-Other Financial Matter
+<option value="CRB Error Correction Guidance">
+CRB Error Correction Guidance
 </option>
 
 
@@ -1239,138 +724,11 @@ Other Financial Matter
 
 
 
+<div id="crbFormArea" class="form-box">
 
 
-<label>
-Estimated Amount Involved
-</label>
+</div>
 
-
-<select name="Amount Involved">
-
-
-<option>
-Below K5,000
-</option>
-
-
-<option>
-K5,000 - K20,000
-</option>
-
-
-<option>
-K20,000 - K100,000
-</option>
-
-
-<option>
-Above K100,000
-</option>
-
-
-</select>
-
-
-
-
-
-<label>
-Who Is The Matter Against?
-</label>
-
-
-<select name="Party">
-
-
-<option>
-Bank / Financial Institution
-</option>
-
-
-<option>
-Loan Company
-</option>
-
-
-<option>
-Individual Person
-</option>
-
-
-<option>
-Employer
-</option>
-
-
-<option>
-Unknown
-</option>
-
-
-</select>
-
-
-
-
-
-<label>
-Do You Have Supporting Documents?
-</label>
-
-
-<select name="Documents">
-
-
-<option>
-Yes
-</option>
-
-
-<option>
-No
-</option>
-
-
-<option>
-Need assistance collecting evidence
-</option>
-
-
-</select>
-
-
-
-
-
-<label>
-Explain The Situation
-</label>
-
-
-<textarea
-
-name="Investigation Details"
-
-placeholder="Describe what happened">
-
-</textarea>
-
-
-
-
-
-<button
-type="submit"
-class="btn btn-whatsapp">
-
-Submit Investigation Request
-
-</button>
-
-
-
-</form>
 
 
 </div>
@@ -1380,45 +738,131 @@ Submit Investigation Request
 
 
 
-<div class="info-box">
 
 
-<strong>
-Disclaimer:
-</strong>
+<section id="investigation">
 
 
-<br><br>
+<h2>
+Financial Investigation & Recovery
+</h2>
 
 
-Bridge Money Solutions Network is a credit advisory and facilitation service.
+
+<div class="card">
 
 
-<br><br>
+<h3>
+Select Investigation Service
+</h3>
 
 
-All loan approvals, interest rates and disbursements are determined by licensed lenders according to their own criteria.
+<select id="investigationType"
+onchange="showInvestigationForm()">
 
 
-<br><br>
+
+<option value="">
+Choose service...
+</option>
 
 
-We do not approve loans, guarantee approval, hold client funds, or act as a lender.
+
+<option value="Unknown Loan Investigation">
+Unknown Loan Investigation
+</option>
 
 
-<br><br>
+
+<option value="Unauthorized Deduction Investigation">
+Unauthorized Deduction Investigation
+</option>
 
 
-We provide introductions and advisory services only.
+
+<option value="Money Recovery">
+Money Recovery
+</option>
 
 
-<br><br>
+
+<option value="Document Verification">
+Document Verification
+</option>
 
 
-Terms and conditions apply.
+
+<option value="Financial Fraud Investigation">
+Financial Fraud Investigation
+</option>
+
+
+
+</select>
+
+
+
+
+<div id="investigationFormArea"
+class="form-box">
 
 
 </div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<div class="card">
+
+
+<h3>
+Important Notice
+</h3>
+
+
+
+<p>
+
+Bridge Money Solutions Network is a credit advisory and facilitation service.
+
+</p>
+
+
+<br>
+
+
+<p>
+
+Loan approval, interest rates and disbursement decisions are made by licensed lenders according to their own requirements.
+
+</p>
+
+
+<br>
+
+
+<p>
+
+We provide credit assessment, introductions, advisory and financial intelligence services.
+
+</p>
+
+
+</div>
+
+
+</section>
 
 
 
@@ -1431,21 +875,23 @@ Terms and conditions apply.
 <footer>
 
 
-<div class="container">
+<h3>
+Bridge Money Solutions Network
+</h3>
 
 
 <p>
-<strong>
 Financial Intelligence & Credit Access Strategist
-</strong>
 </p>
 
+
+<br>
 
 
 <p>
 WhatsApp:
-
-<a href="https://wa.me/260976605457">
+<a style="color:#25D366"
+href="https://wa.me/260976605457">
 
 0976605457
 
@@ -1454,28 +900,22 @@ WhatsApp:
 </p>
 
 
-
-<p>
-<strong>
-Chisha Chibale
-</strong>
-</p>
-
+<br>
 
 
 <p>
 
-<a href="mailto:bridgemoneysolutions@gmail.com">
+Email:
+
+<a style="color:white"
+href="mailto:bridgemoneysolutions@gmail.com">
 
 bridgemoneysolutions@gmail.com
 
 </a>
 
+
 </p>
-
-
-
-</div>
 
 
 </footer>
@@ -1483,181 +923,500 @@ bridgemoneysolutions@gmail.com
 
 
 
-
-<a
+<a 
+class="whatsapp-float"
 href="https://wa.me/260976605457"
-class="sticky-cta"
 target="_blank">
 
 💬
 
 </a>
+
+
+
+
+
 <script>
 
-function updateWhatsAppLink(type){
 
-const base="https://wa.me/260976605457?text=";
-
-let select;
-let button;
-let prefix;
-
-
-if(type==="civil"){
-
-select=document.getElementById("civilSelect");
-button=document.getElementById("civilWhatsApp");
-prefix="Loan Enquiry: ";
-
-}
-
-
-if(type==="crb"){
-
-select=document.getElementById("crbSelect");
-button=document.getElementById("crbWhatsApp");
-prefix="CRB Service Enquiry: ";
-
-}
-
-
-if(type==="invest"){
-
-select=document.getElementById("investSelect");
-button=document.getElementById("investWhatsApp");
-prefix="Investigation Service Enquiry: ";
-
-}
-
-
-
-if(select.value){
-
-const message =
-prefix +
-select.value +
-"\n\nExpect feedback within 2 hours.";
-
-
-button.href =
-base + encodeURIComponent(message);
-
-}
-
-
-}
+const FORMSPREE_URL =
+"https://formspree.io/f/mgogwdok";
 
 
 
 
 
-async function submitVehicleLoan(e,form){
-
-e.preventDefault();
+function createDynamicForm(service,fields){
 
 
-try{
+
+let html = `
 
 
-const response = await fetch(form.action,{
+<form 
+onsubmit="sendLead(event,this)">
 
-method:"POST",
 
-body:new FormData(form),
 
-headers:{
-"Accept":"application/json"
-}
+<input 
+type="hidden"
+name="Service"
+value="${service}">
+
+
+<input 
+type="hidden"
+name="Source"
+value="Bridge Money Solutions Website">
+
+
+
+<h3>
+${service}
+Application
+</h3>
+
+
+
+`;
+
+
+
+
+fields.forEach(field=>{
+
+
+html += `
+
+
+<label>
+${field}
+</label>
+
+
+<input
+
+type="text"
+
+name="${field}"
+
+placeholder="Enter ${field}"
+
+required>
+
+
+`;
+
+
 
 });
 
 
 
-if(!response.ok){
 
-throw new Error("Formspree failed");
+
+html += `
+
+
+<label>
+Additional Information
+</label>
+
+
+<textarea
+
+name="Additional Details"
+
+placeholder="Explain your situation">
+
+</textarea>
+
+
+
+
+<button 
+class="btn btn-whatsapp"
+type="submit">
+
+Submit Application
+
+</button>
+
+
+</form>
+
+
+`;
+
+
+
+return html;
+
 
 }
 
 
 
 
-const parking =
-document.querySelector(
-'input[name="parking"]:checked'
-).value;
 
 
 
-const amount =
-document.getElementById("amount").value;
+
+
+function showLoanForm(){
 
 
 
-const location =
-document.getElementById("location").value;
+let choice =
+document.getElementById("loanType").value;
 
 
 
-const vehicle =
-document.getElementById("carDetails").value;
+let box =
+document.getElementById("loanFormArea");
 
 
 
-const whitebook =
-document.querySelector(
-'input[name="whitebookName"]:checked'
-).value;
+if(!choice){
+
+box.innerHTML="";
+
+return;
+
+}
 
 
 
-const available =
-document.querySelector(
-'input[name="whitebookAvailable"]:checked'
-).value;
 
+box.innerHTML =
+createDynamicForm(
 
+choice,
 
-const message =
+[
 
-`VEHICLE LOAN APPLICATION
+"Full Name",
 
-Loan Type:
-${parking}
+"Phone Number",
 
-Amount:
-K${amount}
+"Employer / Company",
 
-Location:
-${location}
+"Monthly Salary",
 
-Vehicle:
-${vehicle}
+"Loan Amount Needed",
 
-White Book Name:
-${whitebook}
+"Loan Purpose",
 
-White Book Available:
-${available}
+"Location"
 
-Please send vehicle pictures and white book.
-
-Expect feedback within 2 hours.`;
-
-
-
-window.open(
-
-"https://wa.me/260976605457?text="+
-encodeURIComponent(message),
-
-"_blank"
+]
 
 );
 
 
 
-alert("Application submitted successfully. WhatsApp will open now.");
+}
+
+
+
+
+
+
+
+
+
+function showVehicleForm(){
+
+
+
+let choice =
+document.getElementById("vehicleType").value;
+
+
+
+let box =
+document.getElementById("vehicleFormArea");
+
+
+
+if(!choice){
+
+box.innerHTML="";
+
+return;
+
+}
+
+
+
+
+
+box.innerHTML =
+createDynamicForm(
+
+choice,
+
+[
+
+"Full Name",
+
+"Phone Number",
+
+"NRC Number",
+
+"Vehicle Make & Model",
+
+"Vehicle Year",
+
+"White Book In Your Name",
+
+"Loan Amount Needed",
+
+"Location"
+
+]
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+function showCRBForm(){
+
+
+
+let choice =
+document.getElementById("crbType").value;
+
+
+
+let box =
+document.getElementById("crbFormArea");
+
+
+
+if(!choice){
+
+box.innerHTML="";
+
+return;
+
+}
+
+
+
+
+
+box.innerHTML =
+createDynamicForm(
+
+choice,
+
+[
+
+"Full Name",
+
+"Phone Number",
+
+"NRC Number",
+
+"Location"
+
+]
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+function showInvestigationForm(){
+
+
+
+let choice =
+document.getElementById("investigationType").value;
+
+
+
+let box =
+document.getElementById("investigationFormArea");
+
+
+
+if(!choice){
+
+box.innerHTML="";
+
+return;
+
+}
+
+
+
+
+
+box.innerHTML =
+createDynamicForm(
+
+choice,
+
+[
+
+"Full Name",
+
+"Phone Number",
+
+"Location",
+
+"Amount Involved",
+
+"Person Or Institution Involved"
+
+]
+
+);
+
+
+
+}
+
+
+
+
+async function sendLead(event,form){
+
+
+event.preventDefault();
+
+
+
+const button =
+form.querySelector("button");
+
+
+
+button.disabled=true;
+
+button.innerHTML="Submitting...";
+
+
+
+
+const formData =
+new FormData(form);
+
+
+
+try{
+
+
+const response =
+await fetch(
+
+FORMSPREE_URL,
+
+{
+
+method:"POST",
+
+body:formData,
+
+headers:{
+
+"Accept":"application/json"
+
+}
+
+}
+
+);
+
+
+
+
+
+if(response.ok){
+
+
+
+let data={};
+
+
+
+formData.forEach(
+(item,value)=>{
+
+data[value]=item;
+
+}
+
+);
+
+
+
+
+
+const message =
+
+`BRIDGE MONEY SOLUTIONS APPLICATION
+
+Service:
+${data.Service || ""}
+
+Name:
+${data["Full Name"] || ""}
+
+Phone:
+${data["Phone Number"] || ""}
+
+Location:
+${data.Location || ""}
+
+Loan Amount:
+${data["Loan Amount Needed"] || ""}
+
+Details:
+${data["Additional Details"] || ""}
+
+Please assist me with my application.`;
+
+
+
+
+
+window.location.href =
+"https://wa.me/260976605457?text="+
+encodeURIComponent(message);
+
+
+
+
+alert(
+
+"Application submitted successfully. WhatsApp will open now."
+
+);
+
+
+
 
 
 form.reset();
@@ -1666,122 +1425,54 @@ form.reset();
 
 }
 
-catch(error){
+else{
 
-console.error(error);
 
 alert(
-"Email submission failed. Please check Formspree activation."
-);
 
-}
-
-
-}
-
-
-
-
-
-async function submitOtherCollateral(e,form){
-
-e.preventDefault();
-
-
-try{
-
-
-const response = await fetch(form.action,{
-
-method:"POST",
-
-body:new FormData(form),
-
-headers:{
-"Accept":"application/json"
-}
-
-});
-
-
-
-if(!response.ok){
-
-throw new Error("Formspree failed");
-
-}
-
-
-
-const collateral =
-document.getElementById("collateralType").value;
-
-
-
-const amount =
-document.getElementById("otherAmount").value;
-
-
-
-const location =
-document.getElementById("otherLocation").value;
-
-
-
-const message =
-
-
-`OTHER COLLATERAL APPLICATION
-
-Collateral Type:
-${collateral}
-
-Amount:
-K${amount}
-
-Location:
-${location}
-
-Please send ownership documents.
-
-Expect feedback within 2 hours.`;
-
-
-
-window.open(
-
-"https://wa.me/260976605457?text="+
-encodeURIComponent(message),
-
-"_blank"
+"Submission failed. Please try again."
 
 );
 
 
-
-alert("Application submitted successfully. WhatsApp will open now.");
-
-
-form.reset();
+}
 
 
 
 }
+
 
 
 catch(error){
 
+
 console.error(error);
 
 
+
 alert(
-"Email submission failed. Please check Formspree activation."
+
+"Network error. Please try again."
+
 );
 
-}
 
 
 }
+
+
+
+
+
+button.disabled=false;
+
+button.innerHTML="Submit Application";
+
+
+
+}
+
+
 
 
 
