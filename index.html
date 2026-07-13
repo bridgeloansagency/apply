@@ -1,332 +1,1309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Bridge Money Solutions Network - Premium Credit Advisory Zambia</title>
+
 <meta name="description" content="Elite credit facilitation. Vehicle loans, CRB services, instant mobile money loans. WhatsApp 0976605457">
+
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root{
-  --bg-dark:#0f172a;--bg-card:#1e293b;--bg-card-hover:#243447;--bg-input:#0f172a;
-  --primary:#f8fafc;--text:#f1f5f9;--text-muted:#94a3b8;--text-dim:#64748b;
-  --accent:#10b981;--accent-hover:#059669;--whatsapp:#25D366;--border:#334155;
-  --gold:#d97706;--gradient:linear-gradient(180deg,#0f172a 0%,#1e293b 100%)
+--bg-dark:#0f172a;
+--bg-card:#1e293b;
+--bg-card-hover:#243447;
+--bg-input:#0f172a;
+--primary:#f8fafc;
+--text:#f1f5f9;
+--text-muted:#94a3b8;
+--text-dim:#64748b;
+--accent:#10b981;
+--accent-hover:#059669;
+--whatsapp:#25D366;
+--border:#334155;
+--gold:#d97706;
+--gradient:linear-gradient(180deg,#0f172a 0%,#1e293b 100%)
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.7;color:var(--text);background:var(--gradient);-webkit-font-smoothing:antialiased}
-.container{max-width:920px;margin:0 auto;padding:0 24px}
-header{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:var(--primary);padding:70px 0 35px;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
-header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(148,163,184,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');opacity:0.6}
-header .container{position:relative;z-index:1}
-header h1{font-size:40px;font-weight:800;margin-bottom:12px;letter-spacing:-1.2px}
-header p{font-size:18px;opacity:.85;font-weight:400;letter-spacing:0.3px}
-.badge{background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25);color:var(--accent);display:inline-block;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;margin-top:18px;backdrop-filter:blur(10px);letter-spacing:0.4px}
-.nav-sticky{position:sticky;top:0;background:rgba(15,23,42,0.85);backdrop-filter:blur(16px);z-index:1000;box-shadow:0 1px 0 rgba(51,65,85,0.3);padding:18px 0;border-bottom:1px solid var(--border)}
-.nav-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.nav-btn{background:transparent;color:var(--text);border:1.5px solid var(--border);padding:11px 24px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;text-decoration:none;transition:all.25s;letter-spacing:0.3px}
-.nav-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-1px)}
-section{padding:70px 0;scroll-margin-top:95px}
-h2{font-size:32px;color:var(--primary);margin-bottom:40px;text-align:center;font-weight:800;letter-spacing:-0.6px}
-h3{font-size:22px;margin:0 0 16px 0;color:var(--primary);font-weight:700;letter-spacing:-0.3px}
-.card{background:var(--bg-card);border-radius:14px;padding:36px;margin-bottom:28px;border:1px solid var(--border);box-shadow:0 4px 6px rgba(0,0,0,0.3);transition:all.3s;position:relative}
-.card:hover{background:var(--bg-card-hover);box-shadow:0 12px 32px rgba(0,0,0,0.4);transform:translateY(-3px);border-color:#475569}
-.hot-tag{position:absolute;top:20px;right:20px;background:var(--gold);color:#fff;padding:7px 16px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase}
-.btn{display:block;background:var(--accent);color:#fff;text-align:center;padding:18px 26px;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px;margin:22px 0 0 0;transition:all.25s;border:none;cursor:pointer;width:100%;letter-spacing:0.4px}
-.btn:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 12px 24px rgba(16,185,129,0.25)}
-.btn:active{transform:scale(0.98)}
-.btn-secondary{background:var(--primary-light);background:#334155}
-.btn-secondary:hover{background:#475569}
-.btn-whatsapp{background:var(--whatsapp)}
-.btn-whatsapp:hover{background:#1ebe5b;box-shadow:0 12px 24px rgba(37,211,102,0.25)}
-.btn-large{padding:20px;font-size:17px}
-.btn-pulse{box-shadow:0 0 0 0 rgba(16,185,129,0.4);animation:pulse 2.5s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,0.4)}70%{box-shadow:0 0 0 16px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
-.requirements{font-size:15px;color:var(--text-muted);margin-top:16px;line-height:1.8}
-select,input,textarea{width:100%;padding:17px;border:1.5px solid var(--border);border-radius:10px;font-size:16px;margin:12px 0 22px 0;background:var(--bg-input);color:var(--text);font-weight:500;transition:all.2s}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(16,185,129,0.1);background:#1e293b}
-label{font-weight:600;font-size:15px;color:var(--text);display:block;margin-top:12px;letter-spacing:0.2px}
-.info-box{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-left:4px solid var(--accent);padding:18px;border-radius:10px;font-size:14px;margin:16px 0;color:var(--text);line-height:1.7}
-.form-group{margin-bottom:24px}
-.radio-group{display:flex;gap:32px;margin:16px 0;flex-wrap:wrap}
-.radio-group label{font-weight:500;display:flex;align-items:center;gap:12px;cursor:pointer;font-size:15px;color:var(--text)}
-.radio-group input{width:22px;height:22px;margin:0;cursor:pointer;accent-color:var(--accent)}
-footer{background:#0f172a;color:var(--text-muted);text-align:center;padding:70px 20px;font-size:15px;border-top:1px solid var(--border)}
-footer a{color:var(--accent);text-decoration:none;font-weight:600}
-footer strong{color:var(--primary)}
-.disclaimer{font-size:13px;color:var(--text-dim);text-align:center;margin:55px 0 0 0;padding:32px;background:var(--bg-card);border-radius:12px;line-height:1.9;border:1px solid var(--border)}
-.grid{display:grid;gap:28px}
-.trust-bar{background:rgba(30,41,59,0.6);text-align:center;padding:18px;font-size:14px;color:var(--text-muted);font-weight:500;letter-spacing:0.3px;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
-.sticky-cta{position:fixed;bottom:32px;right:32px;background:var(--whatsapp);color:#fff;width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;text-decoration:none;box-shadow:0 10px 30px rgba(37,211,102,0.35);z-index:999;transition:all.3s}
-.sticky-cta:hover{transform:scale(1.1);box-shadow:0 14px 40px rgba(37,211,102,0.45)}
-@media (min-width:720px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+font-family:'Inter',Arial,sans-serif;
+line-height:1.7;
+color:var(--text);
+background:var(--gradient)
+}
+
+.container{
+max-width:920px;
+margin:auto;
+padding:0 24px
+}
+
+
+header{
+background:linear-gradient(135deg,#0f172a,#1e293b);
+padding:70px 0 35px;
+text-align:center;
+border-bottom:1px solid var(--border)
+}
+
+header h1{
+font-size:40px;
+font-weight:800;
+margin-bottom:12px
+}
+
+header p{
+font-size:18px
+}
+
+.sub{
+font-size:18px;
+opacity:.85
+}
+
+.badge{
+background:rgba(16,185,129,.12);
+border:1px solid rgba(16,185,129,.25);
+color:var(--accent);
+display:inline-block;
+padding:9px 18px;
+border-radius:8px;
+margin-top:18px;
+font-size:13px;
+font-weight:600
+}
+
+
+.nav-sticky{
+position:sticky;
+top:0;
+background:rgba(15,23,42,.9);
+padding:18px 0;
+border-bottom:1px solid var(--border);
+z-index:1000
+}
+
+.nav-row{
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap
+}
+
+.nav-btn{
+color:white;
+border:1px solid var(--border);
+padding:11px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600
+}
+
+.nav-btn:hover{
+background:var(--accent)
+}
+
+
+.trust-bar{
+text-align:center;
+padding:18px;
+background:#1e293b;
+color:var(--text-muted)
+}
+
+
+section{
+padding:70px 0
+}
+
+
+h2{
+font-size:32px;
+text-align:center;
+margin-bottom:40px
+}
+
+
+h3{
+font-size:22px;
+margin-bottom:16px
+}
+
+
+.card{
+background:var(--bg-card);
+padding:36px;
+border-radius:14px;
+margin-bottom:28px;
+border:1px solid var(--border)
+}
+
+
+.grid{
+display:grid;
+gap:28px
+}
+
+
+@media(min-width:720px){
+.grid-3{
+grid-template-columns:repeat(3,1fr)
+}
+}
+
+
+.hot-tag{
+background:var(--gold);
+padding:7px 16px;
+border-radius:6px;
+font-size:11px;
+font-weight:700;
+display:inline-block;
+margin-bottom:15px
+}
+
+
+.btn{
+display:block;
+width:100%;
+padding:18px;
+background:var(--accent);
+color:white;
+text-align:center;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+margin-top:20px;
+border:none;
+cursor:pointer
+}
+
+
+.btn-secondary{
+background:#334155
+}
+
+
+.btn-whatsapp{
+background:var(--whatsapp)
+}
+
+
+.requirements{
+color:var(--text-muted);
+margin:15px 0
+}
+
+
+input,select,textarea{
+
+width:100%;
+padding:17px;
+margin:12px 0 22px;
+border-radius:10px;
+border:1px solid var(--border);
+background:var(--bg-input);
+color:white;
+font-size:16px
+
+}
+
+
+label{
+font-weight:600;
+display:block
+}
+
+
+.radio-group{
+
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+margin:15px 0
+
+}
+
+
+.radio-group input{
+width:auto;
+margin:0
+}
+
+
+.info-box{
+
+background:rgba(16,185,129,.08);
+border-left:4px solid var(--accent);
+padding:18px;
+border-radius:10px;
+margin:15px 0
+
+}
+
+
+footer{
+
+background:#0f172a;
+text-align:center;
+padding:70px 20px;
+color:var(--text-muted)
+
+}
+
+
+.sticky-cta{
+
+position:fixed;
+right:32px;
+bottom:32px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
+text-decoration:none
+
+}
+
+
 </style>
+
 </head>
+
 <body>
+
+
 <header>
+
 <div class="container">
-<h1>BRIDGE MONEY SOLUTIONS NETWORK</h1>
-<p><div class="sub">
-BRIDGE LOANS AGENCY- Premium Credit Advisory
-</div></p>
-<div class="badge">
-✓Loan consultancy ✓ CRB advisory Services ✓ Vehicle Loans |Financial Investigations & Recoveries </div>
+
+<h1>
+BRIDGE MONEY SOLUTIONS NETWORK
+</h1>
+
+
+<div class="sub">
+Bridge Loans Agency | Premium Credit Advisory Services
 </div>
+
+
+<div class="badge">
+
+✓ Loan Consultancy 
+✓ CRB Advisory Services 
+✓ Vehicle Loans 
+✓ Financial Investigations & Recoveries
+
+</div>
+
+</div>
+
 </header>
 
+
 <nav class="nav-sticky">
+
 <div class="container">
+
 <div class="nav-row">
+
 <a href="#loans" class="nav-btn">Instant Loans</a>
+
 <a href="#collateral" class="nav-btn">Vehicle Loans</a>
+
 <a href="#crb" class="nav-btn">CRB Services</a>
+
 <a href="#investigations" class="nav-btn">Investigations</a>
+
 </div>
+
 </div>
+
 </nav>
 
-<div class="trust-bar">Direct Lender Network | Zero Upfront Fees | 24Hrs WhatsApp Support | Instant Loans</div>
+
+<div class="trust-bar">
+
+Direct Lender Network | Zero Upfront Fees | 24Hrs WhatsApp Support | Instant Loans
+
+</div>
+
 
 <main class="container">
+
+
 <section id="loans">
-<h2>Instant Mobile Money Loans - Approved in 5 Minutes</h2>
+
+<h2>
+Instant Mobile Money Loans - Approved in 5 Minutes
+</h2>
+
+
 <div class="grid grid-3">
-<div class="card">
-<div class="hot-tag">Fastest</div>
-<h3>ZAMCASH upto K500</h3>
-<p class="requirements">Requirements: NRC + Mobile Money Number<br><strong>Instant disbursement 24/7</strong></p>
-<a href="https://www.zamcash.com/invite/475359" class="btn btn-accent btn-pulse" target="_blank">Apply in 60 Seconds</a>
-</div>
-<div class="card">
-<h3>ZAMLOAN upto K100,000</h3>
-<p class="requirements">For Civil Servants & Defence Personnel<br>NRC + Payslip + Bank/Mobile Money</p>
-<a href="https://zamloan.com/invite/sms_zl_121670" class="btn btn-secondary" target="_blank">Check Eligibility</a>
-</div>
-<div class="card">
-<h3>BIU MONEY upto K100,000</h3>
-<p class="requirements">For GRZ Employees Only<br>NRC + Payslip + Bank/Mobile Money</p>
-<a href="https://www.biumoney.com/invite/227556" class="btn btn-secondary" target="_blank">Apply Now</a>
-</div>
-</div>
-</section>
 
+
+<div class="card">
+
+<div class="hot-tag">
+Fastest
+</div>
+
+
+<h3>
+ZAMCASH upto K500
+</h3>
+
+<p class="requirements">
+Requirements: NRC + Mobile Money Number
+<br>
+<strong>Instant disbursement 24/7</strong>
+</p>
+
+
+<a href="https://www.zamcash.com/invite/475359" class="btn" target="_blank">
+Apply in 60 Seconds
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+ZAMLOAN upto K100,000
+</h3>
+
+<p class="requirements">
+Civil Servants & Defence Personnel
+<br>
+NRC + Payslip + Bank/Mobile Money
+</p>
+
+
+<a href="https://zamloan.com/invite/sms_zl_121670" class="btn btn-secondary" target="_blank">
+Check Eligibility
+</a>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+BIU MONEY upto K100,000
+</h3>
+
+<p class="requirements">
+For GRZ Employees Only
+<br>
+NRC + Payslip + Bank/Mobile Money
+</p>
+
+
+<a href="https://www.biumoney.com/invite/227556" class="btn btn-secondary" target="_blank">
+Apply Now
+</a>
+
+
+</div>
+
+
+</div>
+
+</section>
 <section id="collateral">
+
 <h2>Vehicle Loan Application - Keep Driving or Park</h2>
+
+
 <div class="card">
+
 <h3>Complete Your Application Below</h3>
-<form id="vehicleForm" onsubmit="submitVehicleLoan(event)">
-<div class="form-group">
+
+
+<form id="vehicleForm"
+action="https://formspree.io/f/mgogwdok"
+method="POST"
+onsubmit="submitVehicleLoan(event,this)">
+
+
+<input type="hidden" name="Service" value="Vehicle Loan Application">
+<input type="hidden" name="Source" value="Bridge Website">
+
+
+<label>Full Name:</label>
+<input type="text" name="Full Name" placeholder="Enter your full name" required>
+
+
+<label>Phone Number:</label>
+<input type="tel" name="Phone Number" placeholder="097xxxxxxx" required>
+
+
+<label>NRC Number:</label>
+<input type="text" name="NRC Number" placeholder="Enter NRC number" required>
+
+
+<label>Email:</label>
+<input type="email" name="Email" placeholder="Enter email address">
+
+
 <label>1. Select Loan Type:</label>
+
 <div class="radio-group">
-<label><input type="radio" name="parking" value="NO PARKING" checked> NO PARKING - You keep driving</label>
-<label><input type="radio" name="parking" value="PARKING"> PARKING - Car stays with lender</label>
+
+<label>
+<input type="radio" name="parking" value="NO PARKING" checked>
+NO PARKING - You keep driving
+</label>
+
+
+<label>
+<input type="radio" name="parking" value="PARKING">
+PARKING - Car stays with lender
+</label>
+
 </div>
+
+
 <div class="info-box">
-<strong>NO PARKING:</strong> Lender holds White Book only. You keep using your car.<br>
+
+<strong>NO PARKING:</strong> Lender holds White Book only. You keep using your car.
+<br><br>
 <strong>PARKING:</strong> Lender holds both Car + White Book until loan cleared.
-</div>
+
 </div>
 
-<div class="form-group">
-<label for="amount">2. Loan Amount Needed (K):</label>
-<input type="number" id="amount" placeholder="e.g. 50000" min="5000" required>
-</div>
 
-<div class="form-group">
-<label for="location">3. Your Location:</label>
-<input type="text" id="location" placeholder="e.g. Lusaka, Kabwe, Ndola" required>
-</div>
 
-<div class="form-group">
-<label for="carDetails">4. Vehicle Make, Model & Year:</label>
-<input type="text" id="carDetails" placeholder="e.g. Toyota Corolla 2018" required>
-</div>
+<label>
+2. Loan Amount Needed (K):
+</label>
 
-<div class="form-group">
-<label>5. Is the White Book registered in your name?</label>
+<input 
+type="number"
+id="amount"
+name="Loan Amount"
+placeholder="e.g. 50000"
+min="5000"
+required>
+
+
+
+<label>
+3. Your Location:
+</label>
+
+<input
+type="text"
+id="location"
+name="Location"
+placeholder="e.g. Lusaka, Kabwe, Ndola"
+required>
+
+
+
+<label>
+4. Vehicle Make, Model & Year:
+</label>
+
+<input
+type="text"
+id="carDetails"
+name="Vehicle Details"
+placeholder="e.g. Toyota Corolla 2018"
+required>
+
+
+
+<label>
+5. Is the White Book registered in your name?
+</label>
+
+
 <div class="radio-group">
-<label><input type="radio" name="whitebookName" value="Yes" checked> Yes, in my name</label>
-<label><input type="radio" name="whitebookName" value="No"> No, not in my name</label>
-</div>
+
+<label>
+<input type="radio" name="whitebookName" value="Yes" checked>
+Yes, in my name
+</label>
+
+
+<label>
+<input type="radio" name="whitebookName" value="No">
+No, not in my name
+</label>
+
 </div>
 
-<div class="form-group">
-<label>6. Do you have the original white book?</label>
+
+
+
+<label>
+6. Do you have the original white book?
+</label>
+
+
 <div class="radio-group">
-<label><input type="radio" name="whitebookAvailable" value="Yes" checked> Yes, I have it</label>
-<label><input type="radio" name="whitebookAvailable" value="No"> No, I don't have it</label>
+
+<label>
+<input type="radio" name="whitebookAvailable" value="Yes" checked>
+Yes, I have it
+</label>
+
+
+<label>
+<input type="radio" name="whitebookAvailable" value="No">
+No, I don't have it
+</label>
+
+
 </div>
-</div>
+
+
 
 <div class="info-box">
-After clicking Submit, WhatsApp will open with your details. Please send clear pictures of the car + white book in the chat. <strong>Expect feedback within 2 hours.</strong>
+
+After clicking Submit, WhatsApp will open with your details.
+Please send clear pictures of the car + white book.
+<strong>Expect feedback within 2 hours.</strong>
+
 </div>
 
-<button type="submit" class="btn btn-whatsapp btn-large">Submit Application</button>
+
+
+<button type="submit" class="btn btn-whatsapp">
+
+Submit Application
+
+</button>
+
+
+
 </form>
+
+
 </div>
+
+
+
+
 
 <div class="card">
-<h3>Other Collateral Application</h3>
-<form id="otherCollateralForm" onsubmit="submitOtherCollateral(event)">
-<div class="form-group">
-<label for="collateralType">1. Collateral Type:</label>
-<input type="text" id="collateralType" placeholder="e.g. House, Land, TV, Laptop, Fridge" required>
-</div>
 
-<div class="form-group">
-<label for="otherAmount">2. Loan Amount Needed (K):</label>
-<input type="number" id="otherAmount" placeholder="e.g. 25000" min="500" required>
-</div>
+<h3>
+Other Collateral Application
+</h3>
 
-<div class="form-group">
-<label for="otherLocation">3. Your Location:</label>
-<input type="text" id="otherLocation" placeholder="e.g. Lusaka, Kabwe" required>
-</div>
+
+
+<form id="otherCollateralForm"
+action="https://formspree.io/f/mgogwdok"
+method="POST"
+onsubmit="submitOtherCollateral(event,this)">
+
+
+
+<input type="hidden" name="Service" value="Other Collateral Loan">
+<input type="hidden" name="Source" value="Bridge Website">
+
+
+
+<label>
+Collateral Type:
+</label>
+
+
+<input
+type="text"
+id="collateralType"
+name="Collateral Type"
+placeholder="House, Land, TV, Laptop, Fridge"
+required>
+
+
+
+
+<label>
+Loan Amount Needed (K):
+</label>
+
+
+<input
+type="number"
+id="otherAmount"
+name="Loan Amount"
+placeholder="e.g. 25000"
+min="500"
+required>
+
+
+
+
+<label>
+Your Location:
+</label>
+
+
+<input
+type="text"
+id="otherLocation"
+name="Location"
+placeholder="e.g. Lusaka, Kabwe"
+required>
+
+
 
 <div class="info-box">
-<strong>Disbursed within 30 minutes</strong> after verification. Send Clear Pictures, Proof of Ownership receipt or title deed for Houses/Land on WhatsApp after submitting. <strong>Expect feedback within 2 hours.</strong>
+
+<strong>After verification</strong> send clear pictures,
+proof of ownership receipt or title deed on WhatsApp.
+
+<strong>Expect feedback within 2 hours.</strong>
+
 </div>
 
-<button type="submit" class="btn btn-whatsapp btn-large">Submit Application</button>
+
+
+<button type="submit" class="btn btn-whatsapp">
+
+Submit Application
+
+</button>
+
+
 </form>
+
+
 </div>
+
+
 </section>
+
+
+
+
 
 <section>
-<h2>Civil Servants & Private Sector Loans</h2>
+
+<h2>
+Civil Servants & Private Sector Loans
+</h2>
+
+
+
 <div class="card">
-<h3>Select Your Loan Type:</h3>
+
+
+<h3>
+Select Your Loan Type:
+</h3>
+
+
+
 <select id="civilSelect" onchange="updateWhatsAppLink('civil')">
-<option value="">Choose loan type...</option>
-<option value="Private Sector loans">Private Sector loans</option>
-<option value="Salary advance">1. Salary advance</option>
-<option value="Civil Servants Top ups Refinancing Restructuring">2. Civil Servants (Top ups, Refinancing & Restructuring)</option>
-<option value="Long Term Loans 12-72 months">3. Long Term Loans upto 12-72 months</option>
+
+<option value="">
+Choose loan type...
+</option>
+
+
+<option value="Private Sector loans">
+Private Sector Loans
+</option>
+
+
+<option value="Salary advance">
+Salary Advance
+</option>
+
+
+<option value="Civil Servants Top ups Refinancing Restructuring">
+Civil Servants Top ups, Refinancing & Restructuring
+</option>
+
+
+<option value="Long Term Loans 12-72 months">
+Long Term Loans 12-72 Months
+</option>
+
+
 </select>
-<p class="requirements">Requirements: NRC + Payslip + Bank statement</p>
-<a id="civilWhatsApp" href="https://wa.me/260976605457?text=Loan%20Enquiry" class="btn btn-secondary btn-large" target="_blank">Check Options</a>
+
+
+
+<p class="requirements">
+
+Requirements: NRC + Payslip + Bank Statement
+
+</p>
+
+
+
+<a id="civilWhatsApp"
+href="https://wa.me/260976605457?text=Loan%20Enquiry"
+class="btn btn-secondary"
+target="_blank">
+
+Check Options
+
+</a>
+
+
 </div>
+
+
 </section>
+
+
+
+
 
 <section id="crb">
-<h2>CRB Services - Clear Your Credit Record</h2>
+
+
+<h2>
+CRB Services - Clear Your Credit Record
+</h2>
+
+
 <div class="card">
-<h3>Select CRB Service:</h3>
+
+
+<h3>
+Select CRB Service:
+</h3>
+
+
+
 <select id="crbSelect" onchange="updateWhatsAppLink('crb')">
-<option value="">Choose CRB service...</option>
-<option value="CRB Report Retrieval Analysis Advisory">1. CRB Report Retrieval, Analysis & Advisory</option>
-<option value="CRB Clearance Guidance">2. Clearance Guidance</option>
-<option value="CRB Listing tracing and Identification">3. Listing Tracing and Identification</option>
-<option value="CRB Report Assessment interpretation">4. CRB Report Assessment and Interpretation</option>
-<option value="CRB report errors correction Details mismatch">5. CRB Report Errors Correction/Details Mismatch</option>
-<option value="Identity NRC Conflict Investigations">6. Identity & NRC Conflict Investigations</option>
-<option value="Document preparation Lender contacting">7. Document Preparation & Lender Contacting</option>
-<option value="Credit Access Strategy">8. Credit Access Strategy</option>
-<option value="Clearance Letters Loan statements Payslips Retrieval">9. Clearance Letters + Loan Statements + Payslips + Bank Statement + T-pin Certificate (Retrieval Assistance)</option>
-</select>
-<p class="requirements">We work both online and physically with all institutions.</p>
-<a id="crbWhatsApp" href="https://wa.me/260976605457?text=CRB%20Service%20Enquiry" class="btn btn-secondary btn-large" target="_blank">Talk to an Expert</a>
-</div>
-</section>
 
+
+<option value="">
+Choose CRB service...
+</option>
+
+
+<option value="CRB Report Retrieval Analysis Advisory">
+CRB Report Retrieval, Analysis & Advisory
+</option>
+
+
+<option value="CRB Clearance Guidance">
+CRB Clearance Guidance
+</option>
+
+
+<option value="CRB Listing tracing and Identification">
+CRB Listing Tracing and Identification
+</option>
+
+
+<option value="CRB Report Assessment interpretation">
+CRB Report Assessment & Interpretation
+</option>
+
+
+<option value="CRB report errors correction">
+CRB Report Errors Correction
+</option>
+
+
+<option value="Identity NRC Conflict Investigations">
+Identity & NRC Conflict Investigations
+</option>
+
+
+<option value="Credit Access Strategy">
+Credit Access Strategy
+</option>
+
+
+</select>
+
+
+
+<p class="requirements">
+
+We work online and physically with institutions.
+
+</p>
+
+
+
+<a id="crbWhatsApp"
+href="https://wa.me/260976605457?text=CRB%20Service%20Enquiry"
+class="btn btn-secondary"
+target="_blank">
+
+Talk to an Expert
+
+</a>
+
+
+</div>
+
+
+</section>
 <section id="investigations">
-<h2>Financial Investigations</h2>
+
+<h2>
+Financial Investigations
+</h2>
+
+
 <div class="card">
-<h3>Select Investigation Service:</h3>
+
+
+<h3>
+Select Investigation Service:
+</h3>
+
+
+
 <select id="investSelect" onchange="updateWhatsAppLink('invest')">
-<option value="">Choose investigation service...</option>
-<option value="Tracing source and destination of funds">Tracing Source and Destination of Funds</option>
-<option value="Refunds and Recoveries">Refunds & Recoveries</option>
-<option value="Deduction stop orders unauthorized deductions">Deduction Stop Orders on Unauthorized Deductions</option>
-<option value="Unknown Loans unveiling">Unknown Loans Unveiling</option>
-<option value="Complaint filing and Expert Guidance">Complaint Filing and Expert Guidance</option>
+
+
+<option value="">
+Choose investigation service...
+</option>
+
+
+<option value="Tracing source and destination of funds">
+Tracing Source and Destination of Funds
+</option>
+
+
+<option value="Refunds and Recoveries">
+Refunds & Recoveries
+</option>
+
+
+<option value="Deduction stop orders unauthorized deductions">
+Deduction Stop Orders on Unauthorized Deductions
+</option>
+
+
+<option value="Unknown Loans unveiling">
+Unknown Loans Unveiling
+</option>
+
+
+<option value="Complaint filing and Expert Guidance">
+Complaint Filing and Expert Guidance
+</option>
+
+
 </select>
-<p class="requirements">Comprehensive financial intelligence. We contact all institutions on your behalf.</p>
-<a id="investWhatsApp" href="https://wa.me/260976605457?text=Investigation%20Service%20Enquiry" class="btn btn-secondary btn-large" target="_blank">Start Investigation</a>
+
+
+
+<p class="requirements">
+
+Comprehensive financial intelligence. We contact institutions on your behalf.
+
+</p>
+
+
+
+<a id="investWhatsApp"
+href="https://wa.me/260976605457?text=Investigation%20Service%20Enquiry"
+class="btn btn-secondary"
+target="_blank">
+
+Start Investigation
+
+</a>
+
+
 </div>
+
+
 </section>
 
-<div class="disclaimer">
-<strong>Disclaimer:</strong> Bridge Money Solutions Network is a credit advisory and facilitation service. All loan approvals, interest rates, and disbursements are determined by licensed lenders on their own terms and criteria. We do not approve loans, guarantee approval, hold client funds, or act as a lender. We provide introductions and advisory services only. Terms and conditions apply.
+
+
+
+
+<div class="info-box">
+
+
+<strong>Disclaimer:</strong>
+
+Bridge Money Solutions Network is a credit advisory and facilitation service.
+
+All loan approvals, interest rates and disbursements are determined by licensed lenders according to their own criteria.
+
+We do not approve loans, guarantee approval, hold client funds, or act as a lender.
+
+We provide introductions and advisory services only.
+
+Terms and conditions apply.
+
+
 </div>
+
+
+
 </main>
 
+
+
+
+
 <footer>
+
+
 <div class="container">
-<p><strong>Financial Intelligence & Credit Access Strategist</strong></p>
-<p>WhatsApp: <a href="https://wa.me/260976605457">0976605457</a></p>
-<p><strong>Chisha Chibale</strong></p>
-<p><a href="mailto:bridgemoneysolutions@gmail.com">bridgemoneysolutions@gmail.com</a></p>
+
+
+<p>
+<strong>
+Financial Intelligence & Credit Access Strategist
+</strong>
+</p>
+
+
+<p>
+WhatsApp:
+<a href="https://wa.me/260976605457">
+0976605457
+</a>
+</p>
+
+
+<p>
+<strong>
+Chisha Chibale
+</strong>
+</p>
+
+
+<p>
+<a href="mailto:bridgemoneysolutions@gmail.com">
+bridgemoneysolutions@gmail.com
+</a>
+</p>
+
+
 </div>
+
+
 </footer>
 
-<a href="https://wa.me/260976605457" class="sticky-cta" target="_blank">💬</a>
+
+
+
+
+<a href="https://wa.me/260976605457"
+class="sticky-cta"
+target="_blank">
+💬
+</a>
+
+
+
+
 
 <script>
-function updateWhatsAppLink(type) {
-  const base = "https://wa.me/260976605457?text=";
-  let select, button, prefix;
 
-  if(type === 'civil') {
-    select = document.getElementById('civilSelect');
-    button = document.getElementById('civilWhatsApp');
-    prefix = "Loan Enquiry: ";
-  } else if(type === 'crb') {
-    select = document.getElementById('crbSelect');
-    button = document.getElementById('crbWhatsApp');
-    prefix = "CRB Service Enquiry: ";
-  } else if(type === 'invest') {
-    select = document.getElementById('investSelect');
-    button = document.getElementById('investWhatsApp');
-    prefix = "Investigation Service Enquiry: ";
-  }
 
-  if(select.value) {
-    const message = prefix + select.value + "%0A%0AExpect feedback within 2 hours.";
-    button.href = base + encodeURIComponent(message);
-  }
+function updateWhatsAppLink(type){
+
+
+const base="https://wa.me/260976605457?text=";
+
+let select;
+let button;
+let prefix;
+
+
+
+if(type==="civil"){
+
+select=document.getElementById("civilSelect");
+button=document.getElementById("civilWhatsApp");
+prefix="Loan Enquiry: ";
+
 }
 
-function submitVehicleLoan(e) {
-  e.preventDefault();
-  const parking = document.querySelector('input[name="parking"]:checked').value;
-  const amount = document.getElementById('amount').value;
-  const location = document.getElementById('location').value;
-  const carDetails = document.getElementById('carDetails').value;
-  const whitebookName = document.querySelector('input[name="whitebookName"]:checked').value;
-  const whitebookAvailable = document.querySelector('input[name="whitebookAvailable"]:checked').value;
 
-  let message = `*VEHICLE LOAN APPLICATION*%0A%0A`;
-  message += `Type: ${parking}%0A`;
-  message += `Amount: K${amount}%0A`;
-  message += `Location: ${location}%0A`;
-  message += `Vehicle: ${carDetails}%0A`;
-  message += `White Book in my name: ${whitebookName}%0A`;
-  message += `White Book available: ${whitebookAvailable}%0A%0A`;
-  message += `Please send clear pictures of the car + white book.%0A%0A`;
-  message += `*Expect feedback within 2 hours.*`;
+else if(type==="crb"){
 
-  window.open(`https://wa.me/260976605457?text=${message}`, '_blank');
+select=document.getElementById("crbSelect");
+button=document.getElementById("crbWhatsApp");
+prefix="CRB Service Enquiry: ";
+
 }
 
-function submitOtherCollateral(e) {
-  e.preventDefault();
-  const collateralType = document.getElementById('collateralType').value;
-  const amount = document.getElementById('otherAmount').value;
-  const location = document.getElementById('otherLocation').value;
 
-  let message = `*OTHER COLLATERAL APPLICATION*%0A%0A`;
-  message += `Collateral Type: ${collateralType}%0A`;
-  message += `Amount: K${amount}%0A`;
-  message += `Location: ${location}%0A%0A`;
-  message += `Please send clear pictures + receipt/title deed.%0A%0A`;
-  message += `*Expect feedback within 2 hours.*`;
+else if(type==="invest"){
 
-  window.open(`https://wa.me/260976605457?text=${message}`, '_blank');
+select=document.getElementById("investSelect");
+button=document.getElementById("investWhatsApp");
+prefix="Investigation Service Enquiry: ";
+
 }
+
+
+
+if(select.value){
+
+let message=
+prefix+
+select.value+
+"\n\nExpect feedback within 2 hours.";
+
+
+button.href=
+base+
+encodeURIComponent(message);
+
+}
+
+
+}
+
+
+
+
+
+
+async function submitVehicleLoan(e,form){
+
+
+e.preventDefault();
+
+
+
+try{
+
+
+await fetch(form.action,{
+
+method:"POST",
+
+body:new FormData(form),
+
+headers:{
+
+"Accept":"application/json"
+
+}
+
+
+});
+
+
+
+const parking=
+document.querySelector(
+'input[name="parking"]:checked'
+).value;
+
+
+
+const amount=
+document.getElementById("amount").value;
+
+
+
+const location=
+document.getElementById("location").value;
+
+
+
+const vehicle=
+document.getElementById("carDetails").value;
+
+
+
+const whitebook=
+document.querySelector(
+'input[name="whitebookName"]:checked'
+).value;
+
+
+
+const available=
+document.querySelector(
+'input[name="whitebookAvailable"]:checked'
+).value;
+
+
+
+
+const message=
+
+`VEHICLE LOAN APPLICATION
+
+Loan Type: ${parking}
+
+Amount: K${amount}
+
+Location: ${location}
+
+Vehicle: ${vehicle}
+
+White Book Name: ${whitebook}
+
+White Book Available: ${available}
+
+Please send vehicle pictures and white book.
+
+Expect feedback within 2 hours.`;
+
+
+
+
+
+window.open(
+
+"https://wa.me/260976605457?text="+
+encodeURIComponent(message),
+
+"_blank"
+
+);
+
+
+
+form.reset();
+
+
+
+}
+
+catch(error){
+
+alert("Submission failed. Please try again.");
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+async function submitOtherCollateral(e,form){
+
+
+e.preventDefault();
+
+
+
+try{
+
+
+await fetch(form.action,{
+
+method:"POST",
+
+body:new FormData(form),
+
+headers:{
+
+"Accept":"application/json"
+
+}
+
+
+});
+
+
+
+const collateral=
+document.getElementById("collateralType").value;
+
+
+
+const amount=
+document.getElementById("otherAmount").value;
+
+
+
+const location=
+document.getElementById("otherLocation").value;
+
+
+
+
+const message=
+
+`OTHER COLLATERAL APPLICATION
+
+Collateral Type: ${collateral}
+
+Amount: K${amount}
+
+Location: ${location}
+
+Please send ownership documents.
+
+Expect feedback within 2 hours.`;
+
+
+
+
+
+window.open(
+
+"https://wa.me/260976605457?text="+
+encodeURIComponent(message),
+
+"_blank"
+
+);
+
+
+
+form.reset();
+
+
+
+}
+
+
+catch(error){
+
+alert("Submission failed. Please try again.");
+
+}
+
+
+}
+
+
+
 </script>
 
+
 </body>
+
 </html>
