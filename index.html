@@ -710,129 +710,290 @@ Submit Application
 
 
 
-<section>
+<section id="loan-enquiry">
 
 <h2>
-Civil Servants & Private Sector Loans
+Civil Servants & Private Sector Loan Assessment
 </h2>
 
 
 <div class="card">
 
-
 <h3>
-Select Your Loan Type:
+Complete Loan Assessment Form
 </h3>
 
 
-<select id="civilSelect" onchange="updateWhatsAppLink('civil')">
+<form 
+action="https://formspree.io/f/mgogwdok"
+method="POST">
 
 
-<option value="">
-Choose loan type...
-</option>
+<input type="hidden" name="Service" value="Loan Assessment Lead">
+
+<input type="hidden" name="Source" value="Bridge Website">
 
 
-<option value="Private Sector Loans">
-Private Sector Loans
-</option>
+
+<label>Full Name</label>
+
+<input 
+type="text"
+name="Full Name"
+placeholder="Your full name"
+required>
 
 
-<option value="Salary Advance">
-Salary Advance
-</option>
+
+<label>Phone Number / WhatsApp</label>
+
+<input
+type="tel"
+name="Phone"
+placeholder="097xxxxxxx"
+required>
 
 
-<option value="Civil Servants Top ups Refinancing Restructuring">
-Civil Servants Top ups, Refinancing & Restructuring
-</option>
 
 
-<option value="Long Term Loans 12-72 Months">
-Long Term Loans 12-72 Months
-</option>
+<label>Location</label>
 
+<input
+type="text"
+name="Location"
+placeholder="Lusaka, Ndola, Kitwe..."
+required>
+
+
+
+
+<label>Employment Type</label>
+
+<select name="Employment Type">
+
+<option>Civil Servant</option>
+
+<option>Private Sector Employee</option>
+
+<option>Business Owner</option>
+
+<option>Self Employed</option>
 
 </select>
 
 
-<p class="requirements">
-
-Requirements: NRC + Payslip + Bank Statement
-
-</p>
 
 
-<a
-id="civilWhatsApp"
-href="https://wa.me/260976605457?text=Loan%20Enquiry"
-class="btn btn-secondary"
-target="_blank">
+<label>Monthly Income Range</label>
 
-Check Options
+<select name="Income Range">
 
-</a>
+<option>Below K3,000</option>
+
+<option>K3,000 - K5,000</option>
+
+<option>K5,000 - K10,000</option>
+
+<option>Above K10,000</option>
+
+</select>
+
+
+
+
+<label>Loan Amount Needed</label>
+
+
+<input
+type="number"
+name="Loan Amount"
+placeholder="Example K50,000"
+required>
+
+
+
+
+<label>Purpose Of Loan</label>
+
+
+<select name="Loan Purpose">
+
+<option>Business</option>
+
+<option>Vehicle</option>
+
+<option>School Fees</option>
+
+<option>Emergency</option>
+
+<option>Debt Consolidation</option>
+
+<option>Other</option>
+
+</select>
+
+
+
+
+<label>Current CRB Status</label>
+
+
+<select name="CRB Status">
+
+<option>Clean</option>
+
+<option>Listed but want assistance</option>
+
+<option>Not sure</option>
+
+</select>
+
+
+
+
+<label>Do you currently have loans?</label>
+
+
+<select name="Existing Loans">
+
+<option>No</option>
+
+<option>Yes</option>
+
+</select>
+
+
+
+<label>Additional Information</label>
+
+
+<textarea
+name="Message"
+placeholder="Explain your situation briefly">
+</textarea>
+
+
+
+<button class="btn btn-whatsapp" type="submit">
+
+Submit Assessment
+
+</button>
+
+
+
+</form>
 
 
 </div>
-
 
 </section>
 <section id="crb">
 
 <h2>
-CRB Services - Clear Your Credit Record
+CRB Intelligence & Credit Recovery Assessment
 </h2>
 
 
 <div class="card">
 
-
 <h3>
-Select CRB Service:
+Find Out Your Credit Problem
 </h3>
 
 
-<select id="crbSelect" onchange="updateWhatsAppLink('crb')">
+<form 
+action="https://formspree.io/f/mgogwdok"
+method="POST">
 
 
-<option value="">
-Choose CRB service...
+<input type="hidden" name="Service" value="CRB Intelligence Assessment">
+
+<input type="hidden" name="Source" value="Bridge Website">
+
+
+
+<label>
+Full Name
+</label>
+
+
+<input
+type="text"
+name="Full Name"
+placeholder="Enter your full name"
+required>
+
+
+
+<label>
+Phone Number / WhatsApp
+</label>
+
+
+<input
+type="tel"
+name="Phone"
+placeholder="097xxxxxxx"
+required>
+
+
+
+
+<label>
+Location
+</label>
+
+
+<input
+type="text"
+name="Location"
+placeholder="Town/City"
+required>
+
+
+
+
+<label>
+Select Your CRB Issue
+</label>
+
+
+<select name="CRB Issue">
+
+
+<option>
+CRB Listing / Blacklisted
 </option>
 
 
-<option value="CRB Report Retrieval Analysis Advisory">
-CRB Report Retrieval, Analysis & Advisory
+<option>
+Unknown Loan Showing
 </option>
 
 
-<option value="CRB Clearance Guidance">
-CRB Clearance Guidance
+<option>
+Identity / NRC Conflict
 </option>
 
 
-<option value="CRB Listing Tracing and Identification">
-CRB Listing Tracing and Identification
+<option>
+Wrong Information On Report
 </option>
 
 
-<option value="CRB Report Assessment and Interpretation">
-CRB Report Assessment & Interpretation
+<option>
+Paid Loan Still Showing
 </option>
 
 
-<option value="CRB Report Errors Correction">
-CRB Report Errors Correction
+<option>
+Need CRB Report Interpretation
 </option>
 
 
-<option value="Identity NRC Conflict Investigations">
-Identity & NRC Conflict Investigations
-</option>
-
-
-<option value="Credit Access Strategy">
-Credit Access Strategy
+<option>
+Need Credit Improvement Strategy
 </option>
 
 
@@ -840,39 +1001,131 @@ Credit Access Strategy
 
 
 
-<p class="requirements">
 
-We work online and physically with institutions.
-
-</p>
-
+<label>
+Do you know which institution listed you?
+</label>
 
 
-<a
-id="crbWhatsApp"
-href="https://wa.me/260976605457?text=CRB%20Service%20Enquiry"
-class="btn btn-secondary"
-target="_blank">
+<select name="Institution Known">
 
-Talk to an Expert
 
-</a>
+<option>
+Yes
+</option>
+
+
+<option>
+No
+</option>
+
+
+<option>
+Not Sure
+</option>
+
+
+</select>
+
+
+
+
+<label>
+Have you checked your CRB report before?
+</label>
+
+
+<select name="CRB Report">
+
+<option>
+Yes
+</option>
+
+<option>
+No
+</option>
+
+<option>
+Need assistance getting report
+</option>
+
+</select>
+
+
+
+
+<label>
+What is your goal?
+</label>
+
+
+<select name="Goal">
+
+
+<option>
+Clear CRB Issues
+</option>
+
+
+<option>
+Understand My Report
+</option>
+
+
+<option>
+Qualify For A Loan
+</option>
+
+
+<option>
+Investigate Unknown Loan
+</option>
+
+
+<option>
+Recover Money / Dispute
+</option>
+
+
+</select>
+
+
+
+
+<label>
+Additional Details
+</label>
+
+
+<textarea
+name="Details"
+placeholder="Explain your issue">
+</textarea>
+
+
+
+
+<button 
+type="submit"
+class="btn btn-whatsapp">
+
+Submit CRB Assessment
+
+</button>
+
+
+</form>
 
 
 </div>
 
 
 </section>
-
-
-
-
 
 <section id="investigations">
 
-
 <h2>
-Financial Investigations
+Financial Investigation & Recovery Assessment
 </h2>
 
 
@@ -880,41 +1133,105 @@ Financial Investigations
 
 
 <h3>
-Select Investigation Service:
+Tell Us What Needs Investigation
 </h3>
 
 
 
-<select id="investSelect" onchange="updateWhatsAppLink('invest')">
+<form
+action="https://formspree.io/f/mgogwdok"
+method="POST">
 
 
-<option value="">
-Choose investigation service...
+<input type="hidden" name="Service" value="Financial Investigation Lead">
+
+<input type="hidden" name="Source" value="Bridge Website">
+
+
+
+<label>
+Full Name
+</label>
+
+
+<input
+type="text"
+name="Full Name"
+placeholder="Your full name"
+required>
+
+
+
+
+<label>
+Phone Number / WhatsApp
+</label>
+
+
+<input
+type="tel"
+name="Phone"
+placeholder="097xxxxxxx"
+required>
+
+
+
+
+<label>
+Location
+</label>
+
+
+<input
+type="text"
+name="Location"
+placeholder="Lusaka, Ndola, Kitwe..."
+required>
+
+
+
+
+
+<label>
+Investigation Type
+</label>
+
+
+<select name="Investigation Type">
+
+
+<option>
+Unknown Loan Investigation
 </option>
 
 
-<option value="Tracing Source and Destination of Funds">
-Tracing Source and Destination of Funds
+<option>
+Unauthorized Deductions
 </option>
 
 
-<option value="Refunds and Recoveries">
-Refunds & Recoveries
+<option>
+Money Recovery
 </option>
 
 
-<option value="Deduction Stop Orders Unauthorized Deductions">
-Deduction Stop Orders on Unauthorized Deductions
+<option>
+Tracing Missing Funds
 </option>
 
 
-<option value="Unknown Loans Unveiling">
-Unknown Loans Unveiling
+<option>
+Loan Fraud Investigation
 </option>
 
 
-<option value="Complaint Filing and Expert Guidance">
-Complaint Filing and Expert Guidance
+<option>
+Document Verification
+</option>
+
+
+<option>
+Other Financial Matter
 </option>
 
 
@@ -922,31 +1239,144 @@ Complaint Filing and Expert Guidance
 
 
 
-<p class="requirements">
-
-Comprehensive financial intelligence. We contact institutions on your behalf.
-
-</p>
 
 
+<label>
+Estimated Amount Involved
+</label>
 
-<a
-id="investWhatsApp"
-href="https://wa.me/260976605457?text=Investigation%20Service%20Enquiry"
-class="btn btn-secondary"
-target="_blank">
 
-Start Investigation
+<select name="Amount Involved">
 
-</a>
+
+<option>
+Below K5,000
+</option>
+
+
+<option>
+K5,000 - K20,000
+</option>
+
+
+<option>
+K20,000 - K100,000
+</option>
+
+
+<option>
+Above K100,000
+</option>
+
+
+</select>
+
+
+
+
+
+<label>
+Who Is The Matter Against?
+</label>
+
+
+<select name="Party">
+
+
+<option>
+Bank / Financial Institution
+</option>
+
+
+<option>
+Loan Company
+</option>
+
+
+<option>
+Individual Person
+</option>
+
+
+<option>
+Employer
+</option>
+
+
+<option>
+Unknown
+</option>
+
+
+</select>
+
+
+
+
+
+<label>
+Do You Have Supporting Documents?
+</label>
+
+
+<select name="Documents">
+
+
+<option>
+Yes
+</option>
+
+
+<option>
+No
+</option>
+
+
+<option>
+Need assistance collecting evidence
+</option>
+
+
+</select>
+
+
+
+
+
+<label>
+Explain The Situation
+</label>
+
+
+<textarea
+
+name="Investigation Details"
+
+placeholder="Describe what happened">
+
+</textarea>
+
+
+
+
+
+<button
+type="submit"
+class="btn btn-whatsapp">
+
+Submit Investigation Request
+
+</button>
+
+
+
+</form>
 
 
 </div>
 
 
 </section>
-
-
 
 
 
