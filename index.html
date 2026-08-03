@@ -1742,7 +1742,10 @@ Accept:"application/json"
 
 if(response.ok){
 
-
+dataLayer.push({
+    event: "loan_application_submit",
+    service: formData.get("Service")
+});
 
 let data={};
 
