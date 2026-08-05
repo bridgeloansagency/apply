@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bridgeloansagency.github.io/apply/sitemap.xml
