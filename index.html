@@ -663,7 +663,7 @@ Investigations
 </a>
 
 <a href="money-guide.html" style="display:inline-block;background:#071a33;color:#fff;padding:12px 18px;border-radius:5px;text-decoration:none;font-weight:700;">
-  Money Guide Zambia
+  Guide
 </a>
 </div>
 
@@ -1754,142 +1754,90 @@ choice,
 
 async function sendLead(event,form){
 
-
 event.preventDefault();
-
-
 
 let button=form.querySelector("button");
 
-
 button.disabled=true;
-
 button.innerHTML="Submitting...";
-
-
 
 let formData=new FormData(form);
 
-
-
 try{
 
-
 let response=await fetch(
-
 FORMSPREE_URL,
-
 {
-
 method:"POST",
-
 body:formData,
-
 headers:{
-
 Accept:"application/json"
-
 }
-
 }
-
 );
-
-
-
 
 if(response.ok){
 
-dataLayer.push({
-    event: "loan_application_submit",
-    service: formData.get("Service")
+if(window.dataLayer && typeof window.dataLayer.push==="function"){
+
+window.dataLayer.push({
+event:"loan_application_submit",
+service:formData.get("Service") || ""
 });
 
-let data={};
+}
 
+let message="BRIDGE MONEY SOLUTIONS APPLICATION\n\n";
 
 formData.forEach((value,key)=>{
 
-data[key]=value;
+if(key==="Source" || String(value).trim()===""){
+return;
+}
+
+message +=
+key +
+":\n" +
+String(value).trim() +
+"\n\n";
 
 });
 
-
-
-
-
-let message=
-
-`BRIDGE MONEY SOLUTIONS APPLICATION
-
-Service:
-${data.Service || ""}
-
-Name:
-${data["Full Name"] || ""}
-
-Phone:
-${data["Phone Number"] || ""}
-
-Location:
-${data.Location || ""}
-
-Loan Amount:
-${data["Loan Amount Needed"] || ""}
-
-Details:
-${data["Additional Details"] || ""}
-
-Please assist me with my application.`;
-
-
-
+message +=
+"Please assist me with my application.";
 
 window.location.href=
-
 "https://wa.me/260976605457?text="+
-
 encodeURIComponent(message);
 
-
-
 }
-
 
 else{
 
-
 alert("Submission failed. Please try again.");
 
+button.disabled=false;
+button.innerHTML="Submit Application";
+
 }
 
-
 }
-
 
 catch(error){
 
+console.error(
+"Bridge lead submission error:",
+error
+);
 
 alert("Network error. Please try again.");
 
-}
-
-
-
 button.disabled=false;
-
 button.innerHTML="Submit Application";
 
-
-
 }
 
-
-
-
-
-
-
+}
 
 // SIMPLE SCROLL ANIMATION
 
