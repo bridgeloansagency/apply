@@ -1880,82 +1880,6 @@ document.querySelectorAll(".reveal")
 </script>
 
 
-<!-- BRIDGE_TRACKING_V1 -->
-<script>
-(function () {
-  window.dataLayer = window.dataLayer || [];
-
-  function bridgeTrack(eventName, data) {
-    window.dataLayer.push(Object.assign({
-      event: eventName
-    }, data || {}));
-  }
-
-  document.addEventListener("click", function (e) {
-    var link = e.target.closest("a");
-    if (!link) return;
-
-    var href = link.href || "";
-
-    if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp") !== -1) {
-      bridgeTrack("whatsapp_click", {
-        link_url: href
-      });
-    }
-
-    if (href.indexOf("tel:") === 0) {
-      bridgeTrack("phone_click", {
-        link_url: href
-      });
-    }
-
-    if (href.indexOf("mailto:") === 0) {
-      bridgeTrack("email_click", {
-        link_url: href
-      });
-    }
-  }, true);
-
-  document.addEventListener("submit", function (e) {
-    var form = e.target;
-    if (!form || form.tagName !== "FORM") return;
-
-    var text = (form.innerText || form.textContent || "").toLowerCase();
-    var id = (form.id || "").toLowerCase();
-    var action = (form.action || "").toLowerCase();
-
-    var formType = "general";
-
-    if (text.indexOf("crb") !== -1 || id.indexOf("crb") !== -1 || action.indexOf("crb") !== -1) {
-      formType = "crb";
-    } else if (
-      text.indexOf("loan") !== -1 ||
-      id.indexOf("loan") !== -1 ||
-      action.indexOf("loan") !== -1
-    ) {
-      formType = "loan";
-    } else if (
-      text.indexOf("investig") !== -1 ||
-      id.indexOf("investig") !== -1 ||
-      action.indexOf("investig") !== -1
-    ) {
-      formType = "investigation";
-    } else if (
-      text.indexOf("recover") !== -1 ||
-      id.indexOf("recover") !== -1 ||
-      action.indexOf("recover") !== -1
-    ) {
-      formType = "recoveries";
-    }
-
-    bridgeTrack("bridge_form_submit", {
-      form_type: formType
-    });
-  }, true);
-
-})();
-</script>
-<!-- /BRIDGE_TRACKING_V1 -->
 </body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
@@ -1967,5 +1891,4 @@ style="display:none;visibility:hidden">
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 </html>
-
 
