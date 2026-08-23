@@ -662,7 +662,7 @@ CRB Services
 Investigations
 </a>
 
-<a href="money-guide.html" style="display:inline-block;background:#071a33;color:#fff;padding:12px 18px;border-radius:5px;text-decoration:none;font-weight:700;">
+<a href="money-guide.html" style="display:inline-block;background:#3f4448;color:#fff;padding:8px 13px;border-radius:4px;text-decoration:none;font-weight:700;font-size:13px;">
   GUIDE
 </a>
 </div>
@@ -879,6 +879,7 @@ Apply Now
 
 <h3>
 ZEED Loans
+<span style="display:inline-block;background:#198754;color:#fff;font-size:11px;font-weight:800;padding:3px 7px;border-radius:10px;margin-left:6px;vertical-align:middle;letter-spacing:.4px;">NEW</span>
 </h3>
 
 <p>
@@ -1360,7 +1361,7 @@ Loan Consultancy | Credit Advisory | Financial Solutions
 
 WhatsApp:
 
-<a href="https://wa.me/260976605457">
+<a href="https://wa.me/260765860700">
 
 0976605457
 
@@ -1394,7 +1395,7 @@ bridgemoneysolutions@gmail.com
 
 <a 
 class="whatsapp-float"
-href="https://wa.me/260976605457"
+href="https://wa.me/260765860700"
 target="_blank">
 
 WhatsApp
@@ -1817,36 +1818,34 @@ data[key]=value;
 
 
 
-let message=
+let message =
 
 `BRIDGE MONEY SOLUTIONS APPLICATION
 
-Service:
-${data.Service || ""}
+`;
 
-Name:
-${data["Full Name"] || ""}
+formData.forEach((value,key)=>{
 
-Phone:
-${data["Phone Number"] || ""}
+if(key === "Source" || String(value).trim() === ""){
+return;
+}
 
-Location:
-${data.Location || ""}
+message +=
+key +
+":\n" +
+String(value).trim() +
+"\n\n";
 
-Loan Amount:
-${data["Loan Amount Needed"] || ""}
+});
 
-Details:
-${data["Additional Details"] || ""}
+message +=
 
-Please assist me with my application.`;
-
-
+"Please assist me with my application.";
 
 
 window.location.href=
 
-"https://wa.me/260976605457?text="+
+"https://wa.me/260765860700?text="+
 
 encodeURIComponent(message);
 
