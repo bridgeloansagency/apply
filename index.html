@@ -1802,7 +1802,14 @@ if(response.ok){
 
 dataLayer.push({
     event: "loan_application_submit",
-    service: formData.get("Service")
+    service: formData.get("Service") || "",
+    source: formData.get("Source") || "Bridge Money Solutions Website",
+    page: window.location.pathname,
+    loan_amount: Number(
+        String(formData.get("Loan Amount Needed") || "")
+            .replace(/[^0-9.]/g, "")
+    ) || 0,
+    currency: "ZMW"
 });
 
 let data={};
@@ -1888,6 +1895,195 @@ button.innerHTML="Submit Application";
 
 
 
+
+
+// ============================================================
+// BRIDGE ANALYTICS — BUSINESS ENGAGEMENT
+// ============================================================
+
+(function(){
+
+    window.dataLayer = window.dataLayer || [];
+
+    function bridgeTrack(eventName, params){
+
+        window.dataLayer.push({
+
+            event: eventName,
+
+            ...params,
+
+            page: window.location.pathname,
+
+            page_title: document.title
+
+        });
+
+    }
+
+
+    // FORM START
+
+    const startedForms = new WeakSet();
+
+    document.addEventListener("focusin", function(e){
+
+        const form = e.target.closest("form");
+
+        if(!form || startedForms.has(form)){
+            return;
+        }
+
+        startedForms.add(form);
+
+        bridgeTrack("form_start", {
+
+            form_type: "loan_application"
+
+        });
+
+    });
+
+
+    // CLICK TRACKING
+
+    document.addEventListener("click", function(e){
+
+        const link = e.target.closest("a");
+
+        if(!link){
+            return;
+        }
+
+        const href = link.getAttribute("href") || "";
+
+        const label = (
+            link.innerText ||
+            link.textContent ||
+            ""
+        )
+        .trim()
+        .replace(/\s+/g," ");
+
+
+        // WHATSAPP
+
+        if(href.indexOf("wa.me/260765860700") !== -1){
+
+            bridgeTrack("whatsapp_click", {
+
+                destination: "Bridge WhatsApp"
+
+            });
+
+            return;
+        }
+
+
+        // ZEED
+
+        if(href.indexOf("zeedloans.com") !== -1){
+
+            bridgeTrack("partner_click", {
+
+                partner: "ZEED Loans",
+
+                partner_type: "loan_partner"
+
+            });
+
+            return;
+        }
+
+
+        // MONEY GUIDE
+
+        if(href.indexOf("money-guide.html") !== -1){
+
+            bridgeTrack("guide_click", {
+
+                guide: "Money Guide"
+
+            });
+
+            return;
+        }
+
+
+        // OTHER EXTERNAL PARTNERS
+
+        if(
+            href.indexOf("http") === 0 &&
+            link.hostname &&
+            link.hostname !== window.location.hostname
+        ){
+
+            bridgeTrack("partner_click", {
+
+                partner: label || link.hostname,
+
+                partner_type: "external"
+
+            });
+
+            return;
+        }
+
+
+        // MAIN CTA
+
+        if(
+            label === "Apply Now" ||
+            label === "Submit Application" ||
+            label === "Get Started" ||
+            label === "Apply"
+        ){
+
+            bridgeTrack("cta_click", {
+
+                cta: label
+
+            });
+
+        }
+
+    });
+
+
+    // UTM CAMPAIGN ATTRIBUTION
+
+    const urlParams =
+        new URLSearchParams(window.location.search);
+
+    const utmSource =
+        urlParams.get("utm_source");
+
+    const utmMedium =
+        urlParams.get("utm_medium");
+
+    const utmCampaign =
+        urlParams.get("utm_campaign");
+
+
+    if(
+        utmSource ||
+        utmMedium ||
+        utmCampaign
+    ){
+
+        bridgeTrack("campaign_visit", {
+
+            utm_source: utmSource || "",
+
+            utm_medium: utmMedium || "",
+
+            utm_campaign: utmCampaign || ""
+
+        });
+
+    }
+
+})();
 
 // SIMPLE SCROLL ANIMATION
 
